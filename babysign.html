@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ベビーサインクラス | Studio Liko</title>
+  <meta name="description" content="Studio Likoのベビーサインクラス。ねんね期（0〜8ヶ月）・ハイハイ期（8ヶ月〜2歳）の月齢別コース。体験会2,200円。福岡市西区姪浜エリア。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Noto Sans JP',sans-serif;color:#3a3228;background:#f8f6f2;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+    :root{--yoga:#6b8f71;--yoga-dark:#4a6b50;--yoga-light:#e8f0e9;--babysign:#d9738a;--babysign-dark:#b5566e;--babysign-light:#fceef1;--bg:#f8f6f2;--bg2:#f0ece5;--text:#3a3228;--text-light:#6b5c50;--border:#e8e2da;--radius:8px}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
+    .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
+    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
+    .page-hero.bs-hero{background:linear-gradient(135deg,var(--babysign-light),#f8f4f4)}
+    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
+    .page-hero p{color:var(--text-light);font-size:.95rem}
+    .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-size:.9rem;font-weight:500;letter-spacing:.04em;transition:all .2s;cursor:pointer}
+    .btn-yoga{background:var(--yoga);color:#fff}
+    .btn-babysign{background:#fff;color:var(--babysign);border:2px solid var(--babysign)}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
+      .nav.open{right:0}
+      .nav ul{flex-direction:column;gap:0;align-items:flex-start}
+      .nav ul li{width:100%;border-bottom:1px solid var(--border)}
+      .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
+      .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+      body{padding-bottom:66px}
+      .page-hero{padding:100px 24px 48px}
+    }
+  </style>
+  <style>
+    .bs-class-items { list-style: none; padding: 0; margin: 14px 0 0; }
+    .bs-class-items li { font-size: 0.84rem; padding: 6px 0 6px 22px; position: relative; border-bottom: 1px solid rgba(0,0,0,0.06); color: var(--text); }
+    .bs-class-items li::before { content: '\2713'; position: absolute; left: 0; color: var(--babysign); font-weight: 700; }
+    .bs-class-items li:last-child { border-bottom: none; }
+    .after-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 32px; }
+    .after-card { background: #fff; border-radius: 12px; padding: 28px 24px; border-left: 4px solid var(--babysign); }
+    .after-card h3 { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; margin-bottom: 10px; color: var(--babysign); }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">Studio Liko</span>
+        <span class="logo-en">福岡市西区 姪浜</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="babysign.html" style="color:var(--babysign);font-weight:700;">ベビーサイン</a></li>
+          <li><a href="yoga.html">ヨガ</a></li>
+          <li><a href="voice.html">受講者の声</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="index.html#contact" class="btn-nav">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ページヘロー -->
+  <div class="page-hero bs-hero">
+    <h1>ベビーサインクラス</h1>
+    <p>まだ言葉にできない赤ちゃんの気持ちを、手のサインで受け取る。<br>「分かってもらえた」という感動が、子育てをぐっと楽しくします。</p>
+  </div>
+  <div class="breadcrumb">
+    <a href="index.html">トップ</a>
+    <span>›</span>
+    <span>ベビーサインクラス</span>
+  </div>
+
+  <!-- ベビーサインとは -->
+  <section class="lesson-info">
+    <div class="container">
+      <h2 class="section-title bs">ベビーサインって何ですか？</h2>
+      <div class="lesson-grid">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/babysign_class_sp.webp" type="image/webp">
+          <source srcset="img/babysign_class.webp" type="image/webp">
+          <img src="img/babysign_class.png" alt="ベビーサインクラスの様子" style="width:100%; height:320px; object-fit:cover; border-radius:12px; display:block;" fetchpriority="high" width="1200" height="900">
+        </picture>
+        <div>
+          <p style="font-size:0.95rem; margin-bottom:20px; line-height:2.2; color:var(--text-light);">
+            ベビーサインとは、言葉がまだ話せない赤ちゃんが手や体を使ったサインで気持ちを伝えるコミュニケーション方法です。<br>「おなかすいた」「眠い」「もっと」「好き」——言葉より先に、気持ちはつながります。
+          </p>
+          <ul class="lesson-points bs-points">
+            <li>
+              <strong>赤ちゃんの「伝えたい」に気づける</strong>
+              泣く前に、サインで教えてくれるようになります。「あ、そういうことだったんだ」という発見の積み重ねが、育児を楽にしてくれます。
+            </li>
+            <li>
+              <strong>「伝わった！」という感動がある</strong>
+              サインで気持ちが通じた瞬間は、親子どちらにとっても特別です。その体験が、赤ちゃんの自信とママの自信につながります。
+            </li>
+            <li>
+              <strong>育児ストレスが軽くなる</strong>
+              「何で泣いているか分からない」というしんどさが、少し楽になります。赤ちゃんの見えている世界が分かるようになる感動もあります。
+            </li>
+            <li>
+              <strong>言葉の発達を妨げない</strong>
+              「言葉が遅くなるのでは？」という心配はよく聞きますが、研究によると言語発達を妨げません。むしろサポートするという報告もあります。
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Likoならではの強み -->
+  <section style="background:var(--bg2); padding:56px 0;">
+    <div class="container">
+      <h2 class="section-title bs">ベビーサインだけじゃない。<br>発達・抱っこ・遊び・ママの不安まで、まるごと見ていく教室です。</h2>
+      <p class="section-lead">Studio Likoのベビーサインは、サインを覚えるだけの場所ではありません。<br>赤ちゃんの育ちを知り、ママが少し楽になれる場所でもあります。</p>
+      <div style="margin:32px 0; border-radius:14px; border:2px dashed var(--border); background:#fafaf8; min-height:200px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:8px; padding:32px;">
+        <p style="font-size:1rem; font-weight:600; color:var(--text-light);">写真準備中</p>
+        <p style="font-size:0.82rem; color:var(--border);">※実際のレッスン・相談風景の写真に差し替え予定です</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; margin-top:40px;">
+        <div style="background:#fff; border-radius:12px; padding:22px 20px; border-top:3px solid var(--babysign);">
+          <h3 style="font-size:0.95rem; margin-bottom:10px; font-family:'Noto Serif JP',serif; color:var(--babysign);">赤ちゃんの正しい発達を知る</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); line-height:1.9;">身体的・社会的・知性的能力を伸ばす遊びを通して、赤ちゃんの成長を一緒に見守ります。</p>
+        </div>
+        <div style="background:#fff; border-radius:12px; padding:22px 20px; border-top:3px solid var(--babysign);">
+          <h3 style="font-size:0.95rem; margin-bottom:10px; font-family:'Noto Serif JP',serif; color:var(--babysign);">正しい抱っこ・抱っこ紐</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); line-height:1.9;">赤ちゃんの体に合った抱っこの仕方と抱っこ紐の使い方を、丁寧にお伝えします。</p>
+        </div>
+        <div style="background:#fff; border-radius:12px; padding:22px 20px; border-top:3px solid var(--babysign);">
+          <h3 style="font-size:0.95rem; margin-bottom:10px; font-family:'Noto Serif JP',serif; color:var(--babysign);">離乳食・食育</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); line-height:1.9;">離乳食の進め方や食育についての疑問に、講座の中で一緒に向き合います。</p>
+        </div>
+        <div style="background:#fff; border-radius:12px; padding:22px 20px; border-top:3px solid var(--babysign);">
+          <h3 style="font-size:0.95rem; margin-bottom:10px; font-family:'Noto Serif JP',serif; color:var(--babysign);">育児の不安も話せる場所</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); line-height:1.9;">「ちょっと聞いてもいいですか？」が言える雰囲気。子育ての不安を抱えたまま帰らせません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 月齢別クラス -->
+  <section style="background:var(--babysign-light); padding:60px 0;">
+    <div class="container">
+      <h2 class="section-title bs">月齢別クラスのご案内</h2>
+      <p class="section-lead">赤ちゃんの成長ステージに合わせて、2つのクラスをご用意しています。</p>
+      <div class="tracks-grid" style="margin-top:40px;">
+        <div class="track-card babysign-card" style="background:#fff;">
+          <img src="img/babysign_nenene.png" alt="ねんね期の赤ちゃんとママ・先生がふれあう様子" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px; display:block;">
+          <h3>ねんねの赤ちゃん講座</h3>
+          <p style="font-size:0.88rem; color:var(--text-light); margin-bottom:12px;">対象：0〜8ヶ月頃（ねんね期〜おすわり前）</p>
+          <p>ねんねの時期から始められる講座です。赤ちゃんのペースに合わせてゆったりと進め、親子のコミュニケーションの土台を作ります。</p>
+          <ul class="bs-class-items">
+            <li>ふれあい遊び・パペット</li>
+            <li>手づくり工作</li>
+            <li>赤ちゃんの正しい発達</li>
+            <li>正しい抱っこ</li>
+            <li>離乳食・食育</li>
+            <li>骨盤引き締め運動</li>
+          </ul>
+          <a href="index.html#contact" class="btn-text bs" style="margin-top:20px; display:inline-block;">この講座について相談する →</a>
+        </div>
+        <div class="track-card babysign-card" style="background:#fff;">
+          <img src="img/babysign_haihai.png" alt="ハイハイ期の赤ちゃんとママ・先生がベビーサインで楽しくふれあう様子" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px; display:block;">
+          <h3>ハイハイからの赤ちゃん講座</h3>
+          <p style="font-size:0.88rem; color:var(--text-light); margin-bottom:12px;">対象：8ヶ月〜2歳頃（ハイハイ期〜あんよ期）</p>
+          <p>170種類以上のベビーサインを楽しみながら学べる講座です。振替対応ありで、お休みしても安心です。</p>
+          <ul class="bs-class-items">
+            <li>170種類以上のベビーサイン</li>
+            <li>歌や手あそびうた・絵本</li>
+            <li>知育工作</li>
+            <li>ティータイム</li>
+            <li>おうちサポート</li>
+            <li>振替対応あり</li>
+          </ul>
+          <a href="index.html#contact" class="btn-text bs" style="margin-top:20px; display:inline-block;">この講座について相談する →</a>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:24px; font-size:0.88rem; color:var(--text-light);">「どちらのクラスか分からない」という場合も、ご相談いただければ一緒に確認します。</p>
+    </div>
+  </section>
+
+  <!-- こんな方に -->
+  <section class="target-section">
+    <div class="container">
+      <h2 class="section-title bs">こんなママ・パパに来てほしい</h2>
+      <div class="target-grid">
+        <div class="target-item">
+          <p>「何で泣いているか分からない」がしんどくなっているとき</p>
+        </div>
+        <div class="target-item">
+          <p>赤ちゃんの気持ちをもっと理解してあげたいと思っているとき</p>
+        </div>
+        <div class="target-item">
+          <p>「伝わった！」という感動を赤ちゃんと一緒に体験したいとき</p>
+        </div>
+        <div class="target-item">
+          <p>同じ月齢のママさんとつながりたい、仲間がほしいとき</p>
+        </div>
+        <div class="target-item">
+          <p>初めての育児に少しだけ自信をつけたいとき</p>
+        </div>
+        <div class="target-item">
+          <p>パパや家族みんなで赤ちゃんとコミュニケーションを楽しみたいとき</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 受講者の声 -->
+  <section class="voices-section">
+    <div class="container">
+      <h2 class="section-title bs">受講された方の声</h2>
+      <div class="voices-grid">
+        <div class="voice-card bs-voice">
+          <span class="voice-tag bs-tag">ベビーサイン</span>
+          <div class="voice-card-main">
+            <div class="voice-photo-wrap">
+              <span class="voice-photo-placeholder">写真<br>準備中</span>
+            </div>
+            <div class="voice-card-content">
+              <p class="voice-body">今しかないこの時期に、ベビーサインに出逢えて本当によかったです。もっと早く知りたかった。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">0歳児ママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card bs-voice">
+          <span class="voice-tag bs-tag">ベビーサイン</span>
+          <div class="voice-card-main">
+            <div class="voice-photo-wrap">
+              <span class="voice-photo-placeholder">写真<br>準備中</span>
+            </div>
+            <div class="voice-card-content">
+              <p class="voice-body">息子の見えている世界を垣間見れた気がして、感動しました。「あ、これが見えてたんだ」って。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">8ヶ月のママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card bs-voice">
+          <span class="voice-tag bs-tag">ベビーサイン</span>
+          <div class="voice-card-main">
+            <div class="voice-photo-wrap">
+              <span class="voice-photo-placeholder">写真<br>準備中</span>
+            </div>
+            <div class="voice-card-content">
+              <p class="voice-body">初めての育児で不安だらけでしたが、Studio Likoに来てから育児が楽しくなりました。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">第一子・1歳のママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card bs-voice">
+          <span class="voice-tag bs-tag">ベビーサイン</span>
+          <div class="voice-card-main">
+            <div class="voice-photo-wrap">
+              <span class="voice-photo-placeholder">写真<br>準備中</span>
+            </div>
+            <div class="voice-card-content">
+              <p class="voice-body">Studio Likoに来てから、子育てへの向き合い方が変わりました。本当にありがとうございます。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">10ヶ月のママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="price-section">
+    <div class="container">
+      <h2 class="section-title bs">ご料金・コース内容</h2>
+      <p class="section-lead">まずは体験会（2,200円）からどうぞ。継続コースもご用意しています。</p>
+      <table class="price-table bs-price">
+        <thead>
+          <tr>
+            <th>コース</th>
+            <th>対象・回数</th>
+            <th>料金（税込）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>体験会</td>
+            <td>初めての方向け・1回</td>
+            <td><strong>2,200円</strong></td>
+          </tr>
+          <tr>
+            <td>ねんねの赤ちゃん講座</td>
+            <td>0〜8ヶ月頃 ／ 3回コース</td>
+            <td><strong>12,000円</strong></td>
+          </tr>
+          <tr>
+            <td rowspan="2">ハイハイからの赤ちゃん講座</td>
+            <td>8ヶ月〜2歳頃 ／ 6回コース</td>
+            <td><strong>24,000円</strong></td>
+          </tr>
+          <tr>
+            <td>8ヶ月〜2歳頃 ／ 10回コース</td>
+            <td><strong>34,000円</strong></td>
+          </tr>
+          <tr>
+            <td>ねんね＋ハイハイ通し受講</td>
+            <td>13回（ねんね3回＋ハイハイ10回）</td>
+            <td><strong>45,000円</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="price-note-box">
+        ※ 料金はすべて税込です。スケジュール・空き状況はLINEまたはメールでお気軽にお尋ねください。「どのコースか分からない」という場合も、一緒に確認します。
+      </div>
+    </div>
+  </section>
+
+  <!-- 卒業後の学び -->
+  <section style="background:var(--bg2); padding:56px 0;">
+    <div class="container">
+      <h2 class="section-title bs">卒業後の学びも続けられます</h2>
+      <p class="section-lead">ベビーサインを卒業した後も、お子さまの成長段階に合わせた講座をご用意しています。</p>
+      <div class="after-cards">
+        <div class="after-card">
+          <h3>イヤイヤ期講座</h3>
+          <p style="font-size:0.9rem; line-height:1.9; color:var(--text-light);">2歳頃から始まるイヤイヤ期に向けた関わり方を学ぶ講座。「なぜイヤイヤするのか」を理解することで、親子の関係がより豊かになります。</p>
+        </div>
+        <div class="after-card">
+          <h3>モンテッソーリ講座</h3>
+          <p style="font-size:0.9rem; line-height:1.9; color:var(--text-light);">お子さまの自立と好奇心を育てるモンテッソーリのアプローチを、日常の関わりに取り入れるための講座です。</p>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:24px; font-size:0.88rem; color:var(--text-light);">詳細・開催時期はLINEでお気軽にご相談ください。</p>
+    </div>
+  </section>
+
+  <!-- 通常クラス以外のご案内 -->
+  <section style="padding:56px 0;">
+    <div class="container">
+      <h2 class="section-title bs">通常クラス以外のご案内</h2>
+      <p class="section-lead">Studio Likoでは通常クラスのほか、さまざまな形でご参加いただける場所をご用意しています。</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; margin-top:36px;">
+        <div style="background:#fff; border-radius:12px; padding:24px 20px; border-left:4px solid var(--babysign);">
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:0.95rem; margin-bottom:10px; color:var(--babysign);">季節イベント</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); line-height:1.9;">水族館・動物園への外出、ハロウィン会、クリスマス会、パン作り・味噌作りなど、季節ごとのイベントを開催しています。ベビーサインを卒業されたご家族もご参加いただけます。</p>
+        </div>
+        <div style="background:#fff; border-radius:12px; padding:24px 20px; border-left:4px solid var(--babysign);">
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:0.95rem; margin-bottom:10px; color:var(--babysign);">ゆっくりさんクラス</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); line-height:1.9;">発達がゆっくりなお子さまのためのクラスです。歌・絵本・ふれあい遊びを通じて、お子さまのペースに合わせたコミュニケーションを大切にしています。</p>
+        </div>
+        <div style="background:#fff; border-radius:12px; padding:24px 20px; border-left:4px solid var(--babysign);">
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:0.95rem; margin-bottom:10px; color:var(--babysign);">出張・オンライン対応</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); line-height:1.9;">企業・保育園・公民館・ママ友グループへの出張体験イベントにも対応しています。遠方の方にはZoomでのオンライン受講（教材発送あり）もご利用いただけます。</p>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:24px; font-size:0.87rem; color:var(--text-light);">詳細・ご相談はLINEまたはお問い合わせフォームからお気軽にどうぞ。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-pickup" style="background:var(--babysign-light);">
+    <div class="container">
+      <h2 class="section-title bs">ベビーサインについてよくある質問</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">何ヶ月から始めるのがいいですか？</div>
+          <div class="faq-a">赤ちゃんの発達に合わせて、ねんね期から参加いただけます。ねんねの赤ちゃん講座（0〜8ヶ月頃）、ハイハイからの赤ちゃん講座（8ヶ月〜2歳頃）など、月齢や発達段階に合わせてご案内しています。「まだ早いかな？」という段階でも、お気軽にご相談ください。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">赤ちゃんがぐずっても大丈夫ですか？</div>
+          <div class="faq-a">もちろんです。泣いても、動き回っても大丈夫。Studio Likoは赤ちゃん連れのママさんが安心して来られる場所でありたいと思っています。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">ベビーサインは言葉の発達に影響しませんか？</div>
+          <div class="faq-a">言葉の遅れにつながることはありません。コミュニケーションへの意欲が高まることで、言語発達をサポートするという報告もあります。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">パパも一緒に参加できますか？</div>
+          <div class="faq-a">パパのご参加もご相談可能です。人数や料金が変わる場合がありますので、まずはLINEにてお気軽にご相談ください。</div>
+        </div>
+      </div>
+      <div class="faq-more" style="margin-top:24px;">
+        <a href="faq.html" class="btn-text bs">すべての質問を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>ベビーサイン体験会について、気軽に相談してください</h2>
+      <p>「どんな雰囲気か知りたい」「どのクラスか分からない」、<br>そういう段階でも大丈夫です。</p>
+      <div class="cta-btns">
+        <a href="https://page.line.me/ttp2821f" class="btn-line">
+          <span>LINE</span>
+          <span>LINEでお気軽に相談する</span>
+        </a>
+        <a href="https://naturalroom.official.jp/%e3%81%94%e4%ba%88%e7%b4%84/" class="btn-yoyaku" target="_blank" rel="noopener">ご予約フォームから予約する</a>
+      </div>
+      <p class="cta-address">福岡市西区愛宕南2丁目12-12（姪浜エリア）</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
+      <p style="margin-top:8px;">
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
+        <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
+        <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
+        <a href="sns.html">公式SNS</a>
+      </p>
+      <p style="margin-top:12px;">© 2024 Studio Liko All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="sticky-cta">
+    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ヨガクラス | Studio Liko</title>
+  <meta name="description" content="Studio Likoのヨガクラス。初心者・マタニティ・産後・シニア・アドバンスまで少人数制で対応。RYT500認定インストラクター。体験1,500円。福岡市西区姪浜エリア。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Noto Sans JP',sans-serif;color:#3a3228;background:#f8f6f2;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+    :root{--yoga:#6b8f71;--yoga-dark:#4a6b50;--yoga-light:#e8f0e9;--babysign:#d9738a;--babysign-dark:#b5566e;--babysign-light:#fceef1;--bg:#f8f6f2;--bg2:#f0ece5;--text:#3a3228;--text-light:#6b5c50;--border:#e8e2da;--radius:8px}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
+    .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
+    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
+    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
+    .page-hero p{color:var(--text-light);font-size:.95rem}
+    .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-size:.9rem;font-weight:500;letter-spacing:.04em;transition:all .2s;cursor:pointer}
+    .btn-yoga{background:var(--yoga);color:#fff}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
+      .nav.open{right:0}
+      .nav ul{flex-direction:column;gap:0;align-items:flex-start}
+      .nav ul li{width:100%;border-bottom:1px solid var(--border)}
+      .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
+      .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+      body{padding-bottom:66px}
+      .page-hero{padding:100px 24px 48px}
+    }
+  </style>
+  <style>
+    .audience-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px; }
+    .audience-tag { display: inline-block; padding: 8px 20px; background: var(--yoga-light); border-radius: 24px; font-size: 0.88rem; font-weight: 500; color: var(--yoga); border: 1px solid var(--yoga); }
+    .maternity-items { list-style: none; padding: 0; margin: 16px 0 0; }
+    .maternity-items li { padding: 7px 0 7px 24px; position: relative; font-size: 0.9rem; border-bottom: 1px solid rgba(0,0,0,0.06); color: var(--text); }
+    .maternity-items li::before { content: '\2665'; position: absolute; left: 0; color: var(--yoga); font-size: 0.75rem; top: 9px; }
+    .maternity-items li:last-child { border-bottom: none; }
+    .policy-note { background: #fff8f0; border-left: 3px solid var(--yoga); border-radius: 0 8px 8px 0; padding: 16px 18px; font-size: 0.85rem; color: var(--text-light); margin-top: 20px; line-height: 2.0; }
+    .policy-note p { margin: 0; }
+    .bs-benefit-box { background: #fff; border-radius: 14px; padding: 32px 28px; border: 1px solid rgba(0,0,0,0.08); max-width: 620px; margin: 32px auto 0; }
+    .bs-benefit-badge { display: inline-block; background: var(--babysign); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 14px; margin-bottom: 16px; letter-spacing: 0.06em; }
+    .bs-benefit-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .bs-benefit-table th { background: var(--babysign); color: #fff; padding: 10px 14px; text-align: left; }
+    .bs-benefit-table td { padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,0.07); }
+    .bs-benefit-table tr:last-child td { border-bottom: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">Studio Liko</span>
+        <span class="logo-en">福岡市西区 姪浜</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="babysign.html">ベビーサイン</a></li>
+          <li><a href="yoga.html" style="color:var(--yoga);font-weight:700;">ヨガ</a></li>
+          <li><a href="voice.html">受講者の声</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="index.html#contact" class="btn-nav">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ページヘロー -->
+  <div class="page-hero">
+    <h1>ヨガクラス</h1>
+    <p>初心者・マタニティ・産後・シニア・アドバンスまで。<br>少人数制で、あなたの体の状態に合わせた丁寧なヨガです。</p>
+  </div>
+  <div class="breadcrumb">
+    <a href="index.html">トップ</a>
+    <span>›</span>
+    <span>ヨガクラス</span>
+  </div>
+
+  <!-- レッスン情報 -->
+  <section class="lesson-info">
+    <div class="container">
+      <h2 class="section-title">Studio Likoのヨガ</h2>
+      <div class="lesson-grid">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/yoga_lesson_sp.webp" type="image/webp">
+          <source srcset="img/yoga_lesson.webp" type="image/webp">
+          <img src="img/yoga_lesson.png" alt="ヨガレッスンの様子" style="width:100%; height:320px; object-fit:cover; border-radius:12px; display:block;" fetchpriority="high" width="1200" height="900">
+        </picture>
+        <div>
+          <p style="font-size:0.95rem; margin-bottom:20px; line-height:2.2; color:var(--text-light);">
+            「自分のための時間を作ることが、なんか後ろめたい」<br>
+            そう感じているママさんほど、ぜひ来てほしい場所です。<br>
+            ヨガの時間は、あなたが自分を整えるための時間。<br>
+            それが、きっと赤ちゃんにも家族にも伝わっていきます。
+          </p>
+          <ul class="lesson-points">
+            <li>
+              <strong>少人数制・最大7名</strong>
+              大勢のクラスでは気になる「ちゃんとできているか」という不安。少人数だから、先生がしっかり見ながら進めます。
+            </li>
+            <li>
+              <strong>初心者・マタニティ・産後・シニア・アドバンスまで対応</strong>
+              「ヨガをやったことがない」「産後で体が心配」「年齢的に不安」という方も、体の状態に合わせてご案内します。
+            </li>
+            <li>
+              <strong>床暖房・木の温もりのあるスタジオ</strong>
+              暑さが苦手な方も無理なく続けやすい、常温の快適な環境。足元から温かく、落ち着いた雰囲気の中で練習できます。
+            </li>
+            <li>
+              <strong>パーソナルヨガ・オンラインも</strong>
+              「グループは少し不安」という方には、パーソナルヨガもご用意しています。遠方の方にはオンラインでも対応しています。
+            </li>
+            <li>
+              <strong>月謝制・チケット制で通いやすく</strong>
+              ライフスタイルに合わせて選べる料金体系。無理なく続けられます。
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- こんな方のためのヨガ -->
+  <section style="padding:48px 0; border-bottom:1px solid var(--border);">
+    <div class="container">
+      <h2 class="section-title">こんな方のためのヨガです</h2>
+      <div class="audience-grid">
+        <span class="audience-tag">初心者・未経験</span>
+        <span class="audience-tag">シニア・60代以上</span>
+        <span class="audience-tag">アドバンス・経験者</span>
+        <span class="audience-tag">マタニティ</span>
+        <span class="audience-tag">産後（〜1年以内目安）</span>
+        <span class="audience-tag">キッズ・子ども</span>
+      </div>
+      <p style="text-align:center; margin-top:20px; font-size:0.9rem; color:var(--text-light);">どこからスタートしても大丈夫。体の状態に合わせてご案内します。</p>
+    </div>
+  </section>
+
+  <!-- インストラクター -->
+  <section style="background:var(--yoga-light); padding:44px 0;">
+    <div class="container">
+      <div style="max-width:640px; margin:0 auto; display:flex; align-items:center; gap:28px;">
+        <picture>
+          <source srcset="img/profile.webp" type="image/webp">
+          <img src="img/profile.png" alt="代表 岩本理子" style="width:120px; height:120px; object-fit:cover; border-radius:50%; flex-shrink:0; border:3px solid var(--border);" loading="lazy" width="120" height="120">
+        </picture>
+        <div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1.1rem; margin-bottom:4px;">岩本 理子</h3>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:12px; letter-spacing:0.06em;">Studio Liko 代表 ／ RYT500認定ヨガインストラクター</p>
+          <p style="font-size:0.9rem; color:var(--text-light); line-height:1.9;">全米ヨガアライアンス RYT500認定。初心者からマタニティ・産後・シニア・アドバンスまで、一人ひとりの体の状態に寄り添った丁寧な指導が得意です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- クラスの種類 -->
+  <section style="background:var(--bg2); padding:60px 0;">
+    <div class="container">
+      <h2 class="section-title">クラスの種類</h2>
+      <div class="strengths-grid" style="margin-top:40px;">
+        <div class="strength-item">
+          <h3>グループヨガ</h3>
+          <p>最大7名の少人数クラス。初心者から経験者まで、幅広く参加いただけます。みんなで一緒に整える時間。</p>
+        </div>
+        <div class="strength-item">
+          <h3>マタニティ・産後ヨガ</h3>
+          <p>妊娠中・産後の体の変化に寄り添い、無理のない動きで行います。産後アドバイス・正しい抱っこ法・ベビーマッサージも取り入れています。</p>
+        </div>
+        <div class="strength-item">
+          <h3>キッズヨガ</h3>
+          <p>お子さまを対象としたヨガクラス。遊び感覚で体を動かしながら、集中力や柔軟性を育てます。</p>
+        </div>
+        <div class="strength-item">
+          <h3>パーソナルヨガ</h3>
+          <p>完全マンツーマン。「自分のペースで」「体の不調に合わせて」という方に。じっくり自分と向き合えます。</p>
+        </div>
+        <div class="strength-item">
+          <h3>オンラインヨガ</h3>
+          <p>遠方の方や、外出が難しい時期でも参加できます。自宅で、自分のペースで。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- マタニティ・産後ヨガ 詳細 -->
+  <section style="padding:60px 0;">
+    <div class="container">
+      <h2 class="section-title">マタニティ・産後ヨガについて</h2>
+      <div style="margin-top:32px; margin-bottom:40px; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.07);">
+        <img src="img/yoga_maternity.png" alt="産後ヨガのクラスで赤ちゃんとふれあうママたちの様子。明るい木の温もりある空間で、リラックスしながら楽しめます。" style="width:100%; height:auto; display:block;" loading="lazy">
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:32px; margin-top:40px;">
+        <div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1.05rem; margin-bottom:16px; color:var(--yoga);">クラスで学べること</h3>
+          <ul class="maternity-items">
+            <li>産後の体に合わせたヨガポーズ</li>
+            <li>産後アドバイス（体の回復・ケア）</li>
+            <li>正しい抱っこ法</li>
+            <li>ベビーマッサージ</li>
+            <li>骨盤底筋・インナーマッスルのケア</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1.05rem; margin-bottom:16px; color:var(--yoga);">お子さま連れについて</h3>
+          <div class="policy-note">
+            <p><strong>産後ヨガ</strong>：お子さま連れOK（1歳頃まで目安）</p>
+            <p><strong>通常クラス</strong>：お子さま同伴はNG</p>
+            <p><strong>託児サービス</strong>：なし</p>
+            <p><strong>1歳以上のお子さま</strong>：ご相談ください</p>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-light); margin-top:14px;">産後ヨガをご希望の方は、かかりつけ医にご確認のうえお申し込みください。</p>
+        </div>
+      </div>
+      <div style="margin-top:40px; border-radius:14px; border:2px dashed var(--border); background:#fafaf8; min-height:200px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:8px; padding:32px;">
+        <p style="font-size:1rem; font-weight:600; color:var(--text-light);">写真準備中</p>
+        <p style="font-size:0.82rem; color:var(--border);">※産後ヨガ・親子で参加できるクラスの雰囲気写真に差し替え予定です</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ベビーサイン会員向けヨガ特典 -->
+  <section style="background:var(--babysign-light); padding:56px 0;">
+    <div class="container">
+      <h2 class="section-title bs">ベビーサイン受講生へのヨガ特典</h2>
+      <p class="section-lead">ベビーサインクラスに通っている方は、特別価格でヨガを始めることができます。</p>
+      <div class="bs-benefit-box">
+        <span class="bs-benefit-badge">BS会員限定</span>
+        <table class="bs-benefit-table">
+          <thead>
+            <tr>
+              <th>内容</th>
+              <th>料金（税込）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ヨガ月謝（5回 ／ 2ヶ月）</td>
+              <td><strong>5,500円</strong></td>
+            </tr>
+            <tr>
+              <td>体験レッスン（1回）</td>
+              <td><strong>1,000円</strong></td>
+            </tr>
+            <tr>
+              <td>入会金</td>
+              <td><strong>不要</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.83rem; color:var(--text-light); margin-top:14px;">※ ベビーサインクラスに現在通っている方が対象です。詳しくはLINEにてご確認ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="price-section">
+    <div class="container">
+      <h2 class="section-title">ご料金・クラス内容</h2>
+      <p class="section-lead">まずは体験レッスン（1,500円）からお気軽にどうぞ。</p>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>クラス</th>
+            <th>内容</th>
+            <th>料金（税込）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>入会金</td>
+            <td>初回のみ</td>
+            <td><strong>6,000円</strong></td>
+          </tr>
+          <tr>
+            <td>体験レッスン</td>
+            <td>初めての方向け・60〜75分</td>
+            <td><strong>1,500円</strong></td>
+          </tr>
+          <tr>
+            <td>グループヨガ（月謝制）</td>
+            <td>週1〜2回・60〜75分</td>
+            <td>お問い合わせください</td>
+          </tr>
+          <tr>
+            <td>チケット制</td>
+            <td>都合に合わせて使えるチケット</td>
+            <td>お問い合わせください</td>
+          </tr>
+          <tr>
+            <td>マタニティ・産後ヨガ</td>
+            <td>妊娠中・産後専用クラス</td>
+            <td>お問い合わせください</td>
+          </tr>
+          <tr>
+            <td>キッズヨガ</td>
+            <td>お子さま対象クラス</td>
+            <td>お問い合わせください</td>
+          </tr>
+          <tr>
+            <td>パーソナルヨガ</td>
+            <td>完全マンツーマン</td>
+            <td>お問い合わせください</td>
+          </tr>
+          <tr>
+            <td>オンラインヨガ</td>
+            <td>Zoom等で対応</td>
+            <td>お問い合わせください</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="price-note-box">
+        ※ 詳しい料金・スケジュールは、LINEまたはメールでお気軽にお尋ねください。
+      </div>
+    </div>
+  </section>
+
+  <!-- タイムテーブル -->
+  <section class="timetable-section">
+    <div class="container">
+      <h2 class="section-title">クラス時間割</h2>
+      <div class="timetable-note">
+        <p>最新のクラス時間割は、LINEにてご案内しております。<br>まずはお気軽にご連絡ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 講師紹介 -->
+  <section style="background:#fff; padding:60px 0;">
+    <div class="container">
+      <h2 class="section-title">Studio Likoの講師たち</h2>
+      <p class="section-lead">Studio Likoでは、代表の岩本理子をはじめ、複数の講師がヨガクラスを担当しています。<br>産後のママ、初心者の方、身体を整えたい方など、一人ひとりに合わせたやさしいレッスンを大切にしています。</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; margin-top:40px;">
+
+        <div style="background:var(--bg2); border-radius:12px; padding:24px 20px; text-align:center; border:1px solid var(--border);">
+          <div style="width:76px; height:76px; border-radius:50%; background:linear-gradient(135deg,#dceade,#fde8ee); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+            <span style="font-size:0.7rem; color:var(--text-light); line-height:1.5;">写真<br>準備中</span>
+          </div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1rem; font-weight:600; margin-bottom:6px;">KAZUE</h3>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:10px; line-height:1.7;">骨格・筋・呼吸を大切にしたヨガ指導</p>
+          <p style="font-size:0.82rem; color:var(--text); line-height:1.85; font-style:italic;">「皆様と時間を共有できる事を楽しみにしてます」</p>
+        </div>
+
+        <div style="background:var(--bg2); border-radius:12px; padding:24px 20px; text-align:center; border:1px solid var(--border);">
+          <div style="width:76px; height:76px; border-radius:50%; background:linear-gradient(135deg,#dceade,#fde8ee); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+            <span style="font-size:0.7rem; color:var(--text-light); line-height:1.5;">写真<br>準備中</span>
+          </div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1rem; font-weight:600; margin-bottom:6px;">MANA</h3>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:10px; line-height:1.7;">ヨガインストラクター</p>
+          <p style="font-size:0.82rem; color:var(--text); line-height:1.85; font-style:italic;">「リラックスできる空間を作れたらと思っています」</p>
+        </div>
+
+        <div style="background:var(--bg2); border-radius:12px; padding:24px 20px; text-align:center; border:1px solid var(--border);">
+          <div style="width:76px; height:76px; border-radius:50%; background:linear-gradient(135deg,#dceade,#fde8ee); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+            <span style="font-size:0.7rem; color:var(--text-light); line-height:1.5;">写真<br>準備中</span>
+          </div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1rem; font-weight:600; margin-bottom:6px;">HIROMI</h3>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:10px; line-height:1.7;">全米ヨガアライアンス RYT200修了</p>
+          <p style="font-size:0.82rem; color:var(--text); line-height:1.85; font-style:italic;">「皆さまの日常生活がより穏やかで充実したものになるといいな」</p>
+        </div>
+
+        <div style="background:var(--bg2); border-radius:12px; padding:24px 20px; text-align:center; border:1px solid var(--border);">
+          <div style="width:76px; height:76px; border-radius:50%; background:linear-gradient(135deg,#dceade,#fde8ee); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+            <span style="font-size:0.7rem; color:var(--text-light); line-height:1.5;">写真<br>準備中</span>
+          </div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1rem; font-weight:600; margin-bottom:6px;">AYUMI</h3>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:10px; line-height:1.7;">全米ヨガアライアンス RYT200修了<br>STOTT PILATES IMP・AM認定インストラクター</p>
+          <p style="font-size:0.82rem; color:var(--text); line-height:1.85; font-style:italic;">「心も身体も健康的にいられるよう皆様のお役に立てたら」</p>
+        </div>
+
+        <div style="background:var(--bg2); border-radius:12px; padding:24px 20px; text-align:center; border:1px solid var(--border);">
+          <div style="width:76px; height:76px; border-radius:50%; background:linear-gradient(135deg,#dceade,#fde8ee); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+            <span style="font-size:0.7rem; color:var(--text-light); line-height:1.5;">写真<br>準備中</span>
+          </div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1rem; font-weight:600; margin-bottom:6px;">SHINOBU</h3>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:10px; line-height:1.7;">ヨガインストラクター</p>
+          <p style="font-size:0.82rem; color:var(--text); line-height:1.85; font-style:italic;">「皆様の心と身体を軽くしなやかにするお手伝いができたら」</p>
+        </div>
+
+        <div style="background:var(--bg2); border-radius:12px; padding:24px 20px; text-align:center; border:1px solid var(--border);">
+          <div style="width:76px; height:76px; border-radius:50%; background:linear-gradient(135deg,#dceade,#fde8ee); margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border);">
+            <span style="font-size:0.7rem; color:var(--text-light); line-height:1.5;">写真<br>準備中</span>
+          </div>
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1rem; font-weight:600; margin-bottom:6px;">NANAMI</h3>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:10px; line-height:1.7;">理学療法士（歴8年）</p>
+          <p style="font-size:0.82rem; color:var(--text); line-height:1.85; font-style:italic;">「心と体をすっきり整えましょう」</p>
+        </div>
+
+      </div>
+      <p style="text-align:center; margin-top:28px; font-size:0.85rem; color:var(--text-light);">クラスの担当講師はスケジュールによって異なります。詳しくはLINEにてご確認ください。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-pickup" style="background:var(--bg2);">
+    <div class="container">
+      <h2 class="section-title">ヨガクラスについてよくある質問</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">体が硬くてもヨガはできますか？</div>
+          <div class="faq-a">大丈夫です。「体が硬いから」という方の方が多いくらいです。ヨガは柔らかくなるための練習なので、今の体の状態は関係ありません。自分のペースで進められます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">産後間もないですが参加できますか？</div>
+          <div class="faq-a">産後の体の回復状況に合わせてご案内します。かかりつけ医に確認いただいた上で、まずはご相談ください。マタニティ・産後ヨガの経験がありますので、安心してお越しください。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">持ち物は何が必要ですか？</div>
+          <div class="faq-a">動きやすい服装でお越しください。その他の持ち物については、お申し込み後に詳しくご案内します。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">赤ちゃんを連れて参加できますか？</div>
+          <div class="faq-a">産後ヨガのクラスはお子さま連れOK（1歳頃まで目安）です。通常クラスはお子さまの同伴をお断りしています。託児サービスはございません。1歳以上のお子さまについては、まずご相談ください。</div>
+        </div>
+      </div>
+      <div class="faq-more" style="margin-top:24px;">
+        <a href="faq.html" class="btn-text">すべての質問を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>ヨガ体験について、気軽に相談してください</h2>
+      <p>「どんな雰囲気か知りたい」という段階でも大丈夫です。</p>
+      <div class="cta-btns">
+        <a href="https://page.line.me/ttp2821f" class="btn-line">
+          <span>LINE</span>
+          <span>LINEでお気軽に相談する</span>
+        </a>
+        <a href="https://naturalroom.official.jp/%e3%81%94%e4%ba%88%e7%b4%84/" class="btn-yoyaku" target="_blank" rel="noopener">ご予約フォームから予約する</a>
+      </div>
+      <p class="cta-address">福岡市西区愛宕南2丁目12-12（姪浜エリア）</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
+      <p style="margin-top:8px;">
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
+        <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
+        <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
+        <a href="sns.html">公式SNS</a>
+      </p>
+      <p style="margin-top:12px;">© 2024 Studio Liko All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="sticky-cta">
+    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

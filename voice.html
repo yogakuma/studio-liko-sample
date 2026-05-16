@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通われた方の声 | Studio Liko</title>
+  <meta name="description" content="Studio Likoに通われた方からいただいたご感想。ベビーサイン・ヨガ・体験レッスンなど、参加された方のリアルな声をご紹介します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Noto Sans JP',sans-serif;color:#3a3228;background:#f8f6f2;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+    :root{--yoga:#6b8f71;--yoga-dark:#4a6b50;--yoga-light:#e8f0e9;--babysign:#d9738a;--babysign-dark:#b5566e;--babysign-light:#fceef1;--bg:#f8f6f2;--bg2:#f0ece5;--text:#3a3228;--text-light:#6b5c50;--border:#e8e2da;--radius:8px}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
+    .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
+    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
+    .page-hero.bs-hero{background:linear-gradient(135deg,var(--babysign-light),#f8f4f4)}
+    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
+    .page-hero p{color:var(--text-light);font-size:.95rem}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
+      .nav.open{right:0}
+      .nav ul{flex-direction:column;gap:0;align-items:flex-start}
+      .nav ul li{width:100%;border-bottom:1px solid var(--border)}
+      .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
+      .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+      body{padding-bottom:66px}
+      .page-hero{padding:100px 24px 48px}
+    }
+  </style>
+  <style>
+    .voice-initial { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
+    .voice-initial-bs { background: var(--babysign-light); color: var(--babysign); }
+    .voice-initial-yoga { background: var(--yoga-light); color: var(--yoga); }
+    .voice-initial-taiken { background: var(--bg2); color: var(--text-light); }
+    .voice-quote-mark { font-size: 2.2rem; line-height: 1; color: var(--babysign); font-family: Georgia, serif; margin-bottom: 4px; display: block; }
+    .voice-quote-mark-yoga { color: var(--yoga); }
+    .voice-body-short { font-size: 1.0rem; line-height: 1.85; color: var(--text); font-weight: 500; margin-bottom: 12px; }
+    .voice-sub { font-size: 0.88rem; color: var(--text-light); line-height: 1.75; }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">Studio Liko</span>
+        <span class="logo-en">福岡市西区 姪浜</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="babysign.html">ベビーサイン</a></li>
+          <li><a href="yoga.html">ヨガ</a></li>
+          <li><a href="voice.html" style="color:var(--yoga);font-weight:700;">受講者の声</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="index.html#contact" class="btn-nav">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <h1>通われた方の声</h1>
+    <p>Studio Likoに通ってくださった方から届いたご感想をご紹介します。</p>
+  </div>
+  <div class="breadcrumb">
+    <a href="index.html">トップ</a>
+    <span>›</span>
+    <span>通われた方の声</span>
+  </div>
+
+  <!-- ===== 特に読んでほしい声 ===== -->
+  <section style="background:linear-gradient(135deg,var(--babysign-light) 0%,var(--yoga-light) 100%); padding:56px 0;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom:8px;">届いた声の中から</h2>
+      <p class="section-lead" style="margin-bottom:36px;">ベビーサイン・ヨガ・体験、それぞれの場から。</p>
+      <div class="voices-grid-v2">
+
+        <div class="voice-card-v2" style="border-top:3px solid var(--babysign);">
+          <span class="voice-tag-v2 voice-tag-bs">ベビーサイン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-bs">A</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark">"</span>
+              <p class="voice-body-short">今しかないこの時期に、ベビーサインに出逢えて本当によかったです。もっと早く知りたかった。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">0歳児ママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="voice-card-v2" style="border-top:3px solid var(--yoga);">
+          <span class="voice-tag-v2 voice-tag-yoga">ヨガ</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-yoga">Y</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark voice-quote-mark-yoga">"</span>
+              <p class="voice-body-short">自分に大切なものを見つめて補充できる、かかせない場所と時間になっています。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">ヨガクラス参加</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="voice-card-v2" style="border-top:3px solid var(--border);">
+          <span class="voice-tag-v2 voice-tag-taiken">体験レッスン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-taiken">O</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark" style="color:var(--text-light);">"</span>
+              <p class="voice-body-short">迷っていましたが思い切って体験に行ってみました。先生の雰囲気がとても温かくて、その場で入会を決めました。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">体験後にご入会 ／ ベビーサイン</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ベビーサインの声 ===== -->
+  <section style="padding:64px 0 48px;">
+    <div class="container">
+      <div class="voice-category-head voice-cat-bs">
+        <h2>ベビーサインクラスに通われた方の声</h2>
+        <p>「伝わった瞬間の感動」「育児が楽しくなった」という声をいただいています。</p>
+      </div>
+      <div class="voices-grid-v2">
+
+        <!-- ベビーサイン 1 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-bs">ベビーサイン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-bs">A</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark">"</span>
+              <p class="voice-body-short">今しかないこの時期に、ベビーサインに出逢えて本当によかったです。もっと早く知りたかった。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">0歳児ママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ベビーサイン 2 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-bs">ベビーサイン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-bs">M</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark">"</span>
+              <p class="voice-body-short">息子の見えている世界を垣間見れた気がして、感動しました。「あ、これが見えてたんだ」って。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">8ヶ月のお子さまのママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ベビーサイン 3 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-bs">ベビーサイン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-bs">R</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark">"</span>
+              <p class="voice-body-short">初めての育児で不安だらけでしたが、Studio Likoに来てから育児が楽しくなりました。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">第一子・1歳のママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ベビーサイン 4 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-bs">ベビーサイン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-bs">K</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark">"</span>
+              <p class="voice-body-short">Studio Likoに来てから、子育てへの向き合い方が変わりました。本当にありがとうございます。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">10ヶ月のお子さまのママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ベビーサイン 5 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-bs">ベビーサイン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-bs">N</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark">"</span>
+              <p class="voice-body-short">サインが通じた瞬間の喜びは、言葉では表せません。赤ちゃんとこんなにやりとりできるんだって、毎回驚いています。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">ねんねの赤ちゃん講座参加</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ヨガの声 ===== -->
+  <section style="background:var(--bg2); padding:64px 0 48px;">
+    <div class="container">
+      <div class="voice-category-head voice-cat-yoga">
+        <h2>ヨガクラスに通われた方の声</h2>
+        <p>「来てよかった」「通うのが楽しみになった」という声をいただいています。</p>
+      </div>
+      <div class="voices-grid-v2">
+
+        <!-- ヨガ 1 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-yoga">ヨガ</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-yoga">Y</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark voice-quote-mark-yoga">"</span>
+              <p class="voice-body-short">自分に大切なものを見つめて補充できる、かかせない場所と時間になっています。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">ヨガクラス参加</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ヨガ 2 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-yoga">産後ヨガ</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-yoga">K</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark voice-quote-mark-yoga">"</span>
+              <p class="voice-body-short">産後で体が心配でしたが、先生が体の状態を一人ひとり確認しながら進めてくれるので、無理なく続けられています。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">産後ヨガ参加 ／ 30代ママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ヨガ 3 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-yoga">ヨガ</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-yoga">T</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark voice-quote-mark-yoga">"</span>
+              <p class="voice-body-short">体が硬くて心配でしたが、少人数なので周りの目も気にならず、自分のペースで続けられています。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">ヨガ未経験からご参加 ／ 40代</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ヨガ 4 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-yoga">ヨガ</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-yoga">H</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark voice-quote-mark-yoga">"</span>
+              <p class="voice-body-short">ここに来る時間だけは「自分のための時間」と思えます。来るたびに心が軽くなって、育児にも良い影響が出ています。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">2歳・0歳のお子さまのママ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 体験レッスンの声 ===== -->
+  <section style="padding:64px 0 48px;">
+    <div class="container">
+      <div class="voice-category-head voice-cat-taiken">
+        <h2>体験レッスンに参加された方の声</h2>
+        <p>「まず体験から」とお越しいただいた方のご感想です。</p>
+      </div>
+      <div class="voices-grid-v2">
+
+        <!-- 体験 1 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-taiken">体験レッスン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-taiken">O</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark" style="color:var(--text-light);">"</span>
+              <p class="voice-body-short">迷っていましたが思い切って体験に行ってみました。先生の雰囲気がとても温かくて、その場で入会を決めました。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">体験後にご入会 ／ ベビーサイン</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 体験 2 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-taiken">体験レッスン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-taiken">F</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark" style="color:var(--text-light);">"</span>
+              <p class="voice-body-short">先生の人柄がよく、ここなら安心して続けられると思いました。体験だけでも十分な情報量でした。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">体験後にご入会 ／ ヨガ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 体験 3 -->
+        <div class="voice-card-v2">
+          <span class="voice-tag-v2 voice-tag-taiken">体験レッスン</span>
+          <div class="voice-card-main">
+            <span class="voice-initial voice-initial-taiken">C</span>
+            <div class="voice-card-content">
+              <span class="voice-quote-mark" style="color:var(--text-light);">"</span>
+              <p class="voice-body-short">体験前にLINEで相談したら丁寧に答えてくれて安心しました。当日も赤ちゃん連れで全然大丈夫で、雰囲気がよかったです。</p>
+              <div class="voice-footer-v2">
+                <span class="voice-person-info">ねんね期のお子さまとご参加</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>体験レッスン・体験会のご相談はこちら</h2>
+      <p>「どんな雰囲気か知りたい」という段階でも大丈夫です。<br>LINEからお気軽にご相談ください。</p>
+      <div class="cta-btns">
+        <a href="https://page.line.me/ttp2821f" class="btn-line">
+          <span>LINE</span>
+          <span>LINEでお気軽に相談する</span>
+        </a>
+        <a href="https://naturalroom.official.jp/%e3%81%94%e4%ba%88%e7%b4%84/" class="btn-yoyaku" target="_blank" rel="noopener">ご予約フォームから予約する</a>
+      </div>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
+        <a href="babysign.html" class="btn-text bs">ベビーサインの詳細を見る →</a>
+        <a href="yoga.html" class="btn-text">ヨガの詳細を見る →</a>
+        <a href="guide.html" class="btn-text">初めての方へのご案内 →</a>
+      </div>
+      <p class="cta-address">福岡市西区愛宕南2丁目12-12（姪浜エリア）</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
+      <p style="margin-top:8px;">
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
+        <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
+        <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
+        <a href="sns.html">公式SNS</a>
+      </p>
+      <p style="margin-top:12px;">© 2024 Studio Liko All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="sticky-cta">
+    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

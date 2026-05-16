@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初めての方へ | Studio Liko</title>
+  <meta name="description" content="Studio Likoが初めての方へ。体験の流れ・料金・持ち物・よくある質問など、初めてでも安心して参加いただけるよう丁寧にご案内します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Noto Sans JP',sans-serif;color:#3a3228;background:#f8f6f2;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+    :root{--yoga:#6b8f71;--yoga-dark:#4a6b50;--yoga-light:#e8f0e9;--babysign:#d9738a;--babysign-dark:#b5566e;--babysign-light:#fceef1;--bg:#f8f6f2;--bg2:#f0ece5;--text:#3a3228;--text-light:#6b5c50;--border:#e8e2da;--radius:8px}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
+    .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
+    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
+    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
+    .page-hero p{color:var(--text-light);font-size:.95rem}
+    .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-size:.9rem;font-weight:500;letter-spacing:.04em;transition:all .2s;cursor:pointer}
+    .btn-yoga{background:var(--yoga);color:#fff}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
+      .nav.open{right:0}
+      .nav ul{flex-direction:column;gap:0;align-items:flex-start}
+      .nav ul li{width:100%;border-bottom:1px solid var(--border)}
+      .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
+      .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+      body{padding-bottom:66px}
+      .page-hero{padding:100px 24px 48px}
+    }
+  </style>
+  <style>
+    .guide-flow {
+      list-style: none;
+      padding: 0;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      counter-reset: flow-step;
+    }
+    .guide-flow li {
+      counter-increment: flow-step;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      border: 1px solid var(--border);
+    }
+    .guide-flow li::before {
+      content: counter(flow-step);
+      font-family: Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--yoga);
+      opacity: 0.45;
+      line-height: 1.1;
+      flex-shrink: 0;
+      min-width: 28px;
+    }
+    .guide-flow.bs-flow li::before { color: var(--babysign); }
+    .guide-flow li h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 5px; }
+    .guide-flow li p { font-size: 0.87rem; color: var(--text-light); line-height: 1.9; margin: 0; }
+
+    .which-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .which-card {
+      border-radius: 12px;
+      padding: 32px 28px;
+      background: #fff;
+      border: 1px solid var(--border);
+    }
+    .which-card.yoga-w { border-top: 3px solid var(--yoga); }
+    .which-card.bs-w { border-top: 3px solid var(--babysign); }
+    .which-card h3 { font-family: 'Noto Serif JP', serif; font-size: 1rem; margin: 10px 0 16px; }
+    .which-list { list-style: none; padding: 0; font-size: 0.87rem; color: var(--text-light); }
+    .which-list li {
+      padding: 7px 0 7px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.7;
+    }
+    .which-list li:last-child { border-bottom: none; }
+    .which-list li::before { content: '✓'; position: absolute; left: 0; color: var(--yoga); font-weight: 700; }
+    .bs-w .which-list li::before { color: var(--babysign); }
+
+    .price-block { margin-top: 40px; }
+    .price-block + .price-block { margin-top: 48px; }
+    .price-block-label {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      background: var(--yoga-light);
+      border-left: 4px solid var(--yoga);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 16px;
+    }
+    .price-block-label.bs { background: var(--babysign-light); border-left-color: var(--babysign); }
+
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .check-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 22px;
+      border: 1px solid var(--border);
+    }
+    .check-card h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 8px; }
+    .check-card p { font-size: 0.84rem; color: var(--text-light); line-height: 1.85; margin: 0; }
+    .ok { color: var(--yoga-dark); font-weight: 600; }
+    .ask { color: var(--babysign-dark); font-weight: 600; }
+
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 32px;
+      align-items: start;
+    }
+    .access-info p { font-size: 0.9rem; line-height: 2.1; margin-bottom: 8px; }
+    .map-placeholder {
+      height: 260px;
+      background: var(--bg2);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.85rem;
+    }
+
+    .reassure-box {
+      background: var(--yoga-light);
+      border-radius: 12px;
+      padding: 30px 36px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .reassure-box h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      color: var(--yoga-dark);
+      margin-bottom: 10px;
+    }
+    .reassure-box p { font-size: 0.9rem; color: var(--text-light); line-height: 2; }
+
+    @media (max-width: 768px) {
+      .which-grid, .checklist-grid, .access-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">Studio Liko</span>
+        <span class="logo-en">福岡市西区 姪浜</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="babysign.html">ベビーサイン</a></li>
+          <li><a href="yoga.html">ヨガ</a></li>
+          <li><a href="voice.html">受講者の声</a></li>
+          <li><a href="guide.html" style="color:var(--yoga);font-weight:700;">初めての方へ</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="index.html#contact" class="btn-nav">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero" style="background:linear-gradient(135deg, var(--yoga-light) 0%, var(--babysign-light) 100%);">
+    <h1>初めての方へ</h1>
+    <p>「気になるけど、初めてだから不安…」<br>そんな気持ちに、全部お答えします。</p>
+  </div>
+  <div class="breadcrumb">
+    <a href="index.html">トップ</a> <span>›</span> <span>初めての方へ</span>
+  </div>
+
+  <!-- Studio Likoってどんな場所？ -->
+  <section style="background:#fff; padding:60px 0;">
+    <div class="container" style="max-width:860px;">
+      <h2 class="section-title">Studio Likoってどんな場所？</h2>
+      <p class="section-lead">初めての方を、安心してお迎えしている場所です。</p>
+      <div style="margin-top:32px; margin-bottom:40px; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.07);">
+        <img src="img/studio_interior.png" alt="Studio Likoのスタジオ内観。天然木の床、ヨガマット、やわらかい光が差し込む居心地のいい空間。" style="width:100%; height:auto; display:block;" loading="lazy">
+      </div>
+      <div class="care-grid" style="margin-top:40px;">
+        <div class="care-item">
+          <h3>最大7名の少人数制</h3>
+          <p>大勢のクラスでは感じやすい「ちゃんとできているか」の不安。少人数だから、一人ひとりのペースに合わせた声かけができます。</p>
+        </div>
+        <div class="care-item">
+          <h3>天然木のあたたかいスタジオ</h3>
+          <p>木の温もりと壁画のある居心地のいい空間。床暖房完備で足元から温かく、初めての方にも「ほっとできる場所」でありたいと思っています。</p>
+        </div>
+        <div class="care-item">
+          <h3>ヨガもベビーサインも、両方ある</h3>
+          <p>ヨガだけ・ベビーサインだけの教室は多い。Studio Likoは両方あるので、「ヨガから始めてベビーサインも」という広がり方もできます。</p>
+        </div>
+        <div class="care-item">
+          <h3>無理な勧誘は一切しません</h3>
+          <p>体験後に継続をご案内することはありますが、強引なお誘いは一切しておりません。「まず雰囲気だけ見たい」という段階でも安心してお越しください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- どちらのクラスか分からない方へ -->
+  <section style="background:var(--bg2); padding:60px 0;">
+    <div class="container" style="max-width:860px;">
+      <h2 class="section-title">ヨガとベビーサイン、どちらにしますか？</h2>
+      <p class="section-lead">迷ったら、この一覧で選んでみてください。<br>「分からない」という場合も、LINEで一緒に確認します。</p>
+      <div class="which-grid">
+        <div class="which-card yoga-w">
+          <span style="font-size:0.68rem; letter-spacing:0.2em; color:var(--yoga); text-transform:uppercase; font-weight:500; display:block;">Yoga</span>
+          <h3>こんな方はヨガへ</h3>
+          <ul class="which-list">
+            <li>自分のための時間がほしい</li>
+            <li>体を動かしたいけど激しい運動は苦手</li>
+            <li>初心者・体が硬い方</li>
+            <li>マタニティ・産後で体が不安な方</li>
+            <li>シニアで無理なく続けたい方</li>
+            <li>ホットヨガが合わなかった方</li>
+          </ul>
+          <a href="yoga.html" class="btn-text" style="margin-top:20px; display:inline-block;">ヨガの詳細を見る →</a>
+        </div>
+        <div class="which-card bs-w">
+          <span style="font-size:0.68rem; letter-spacing:0.2em; color:var(--babysign); text-transform:uppercase; font-weight:500; display:block;">Baby Sign</span>
+          <h3>こんな方はベビーサインへ</h3>
+          <ul class="which-list">
+            <li>赤ちゃんの気持ちをもっと知りたい</li>
+            <li>「何で泣いているか分からない」が続いている</li>
+            <li>子育てに少し自信をつけたい</li>
+            <li>同じ月齢のママ友とつながりたい</li>
+            <li>ねんね期〜2歳頃の赤ちゃんがいる</li>
+            <li>パパと一緒に参加したい</li>
+          </ul>
+          <a href="babysign.html" class="btn-text bs" style="margin-top:20px; display:inline-block;">ベビーサインの詳細を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ヨガ体験の流れ -->
+  <section style="background:#fff; padding:60px 0;">
+    <div class="container" style="max-width:720px;">
+      <h2 class="section-title">ヨガ体験の流れ</h2>
+      <p class="section-lead">初回から継続まで、5ステップでご案内します。</p>
+      <ol class="guide-flow">
+        <li>
+          <div>
+            <h4>スケジュールを確認する</h4>
+            <p>公式LINEまたはHPで最新のクラス日程をご確認ください。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>公式LINEで体験を予約する</h4>
+            <p>「体験したいです」と送るだけ。希望日・お名前をお知らせください。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>持ち物を準備する</h4>
+            <p>動きやすい服装・飲み物・タオル・体験料（1,500円）をご用意ください。ヨガマットはスタジオでご用意します。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>少人数クラスに参加する</h4>
+            <p>最大7名。自分のペースで参加できます。終了後に質問があればお気軽にどうぞ。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>継続を検討する（任意）</h4>
+            <p>体験後1週間以内のご入会で入会金（6,000円）が免除されます。もちろん「体験だけ」でも大丈夫です。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section style="background:var(--bg2); padding:60px 0;">
+    <div class="container" style="max-width:860px;">
+      <h2 class="section-title">料金一覧</h2>
+      <p class="section-lead">まずは体験から。継続はその後ゆっくり考えていただければ大丈夫です。</p>
+
+      <div class="price-block">
+        <div class="price-block-label">ヨガクラス</div>
+        <table class="price-table">
+          <thead><tr><th>プラン</th><th>内容</th><th>料金</th></tr></thead>
+          <tbody>
+            <tr><td>体験レッスン</td><td>初回・60〜75分</td><td><strong>1,500円</strong></td></tr>
+            <tr><td>フリーパス</td><td>月額・通い放題</td><td>13,000円/月</td></tr>
+            <tr><td>デイフリー</td><td>月額・特定曜日通い放題</td><td>9,800円/月</td></tr>
+            <tr><td>月4回</td><td>月額・週1ペース</td><td>7,700円/月</td></tr>
+            <tr><td>月4回＋パーソナル1回</td><td>月額＋個別1時間セット</td><td>11,000円/月</td></tr>
+            <tr><td>チケット1枚</td><td>都度利用</td><td>2,500円</td></tr>
+            <tr><td>チケット5回</td><td>まとめ買い</td><td>11,000円</td></tr>
+            <tr><td>チケット10回</td><td>まとめ買い</td><td>20,000円</td></tr>
+            <tr><td>マタニティ・産後ヨガ</td><td>月4回</td><td>7,000円/月</td></tr>
+            <tr><td>パーソナルレッスン</td><td>完全マンツーマン・1時間</td><td>4,000円〜</td></tr>
+          </tbody>
+        </table>
+        <div class="price-note-box">
+          ※ 入会金6,000円が別途かかりますが、体験後1週間以内のご入会で免除されます。<br>
+          ※ 最新の料金・スケジュールはLINEにてご確認ください。価格は変更になる場合があります。
+        </div>
+      </div>
+
+      <div class="price-block">
+        <div class="price-block-label bs">ベビーサインクラス</div>
+        <table class="price-table bs-price">
+          <thead><tr><th>クラス</th><th>対象</th><th>料金</th></tr></thead>
+          <tbody>
+            <tr><td>体験会</td><td>初めての方向け・1回</td><td><strong>2,200円</strong></td></tr>
+            <tr><td>ねんねの赤ちゃん講座</td><td>0〜8ヶ月頃 ／ 3回コース</td><td><strong>12,000円</strong></td></tr>
+            <tr><td>ハイハイからの赤ちゃん講座</td><td>8ヶ月〜2歳頃 ／ 6〜10回コース</td><td>24,000円〜</td></tr>
+          </tbody>
+        </table>
+        <div class="price-note-box" style="border-left-color:var(--babysign);">
+          ※ ベビーサインの詳細な料金はLINEまたはメールでお気軽にお尋ねください。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ベビーサイン体験会の流れ -->
+  <section style="background:#fff; padding:60px 0;">
+    <div class="container" style="max-width:720px;">
+      <h2 class="section-title bs">ベビーサイン体験会の流れ</h2>
+      <p class="section-lead">赤ちゃんと一緒に、気軽に来てみてください。</p>
+      <ol class="guide-flow bs-flow">
+        <li>
+          <div>
+            <h4>開催日程を確認する</h4>
+            <p>体験会は月1〜2回開催しています。LINEまたはHPで最新日程をご確認ください。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>LINEで申し込む</h4>
+            <p>参加希望日・お名前・赤ちゃんの月齢をLINEでお知らせください。パパと一緒に参加される場合も事前にご連絡を。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>赤ちゃんと一緒に参加する</h4>
+            <p>動きやすい服装でお越しください。泣いても、ぐずっても大丈夫です。月齢に合わせてゆったり進めます。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>継続を検討する（任意）</h4>
+            <p>体験後に継続についてご案内します。無理なお誘いは一切しませんので、まず体験だけでも大歓迎です。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 持ち物チェックリスト -->
+  <section style="background:var(--bg2); padding:60px 0;">
+    <div class="container" style="max-width:860px;">
+      <h2 class="section-title">当日の持ち物・確認事項</h2>
+      <p class="section-lead">事前に確認しておくと安心です。</p>
+      <div class="checklist-grid">
+        <div class="check-card">
+          <h4>服装</h4>
+          <p><span class="ok">✓ なんでもOK</span><br>動きやすい服装であれば大丈夫。ヨガウェアでなくても構いません。</p>
+        </div>
+        <div class="check-card">
+          <h4>ヨガの持ち物</h4>
+          <p><span class="ok">✓ 持参</span><br>飲み物・タオル・体験料（1,500円）。ヨガマットはスタジオでご用意します。</p>
+        </div>
+        <div class="check-card">
+          <h4>授乳・おむつ替え</h4>
+          <p><span class="ok">✓ 可</span><br>授乳ケープをお持ちいただければスタジオ内でご利用いただけます。</p>
+        </div>
+        <div class="check-card">
+          <h4>駐車場・ベビーカー</h4>
+          <p><span class="ask">→ 事前確認を</span><br>駐車場・ベビーカーでのご来館は事前にLINEでご確認ください。</p>
+        </div>
+        <div class="check-card">
+          <h4>赤ちゃん連れ（ヨガ）</h4>
+          <p>マタニティ・産後ヨガは赤ちゃん連れでご参加いただけます。通常クラスへの同伴は事前にご相談ください。</p>
+        </div>
+        <div class="check-card">
+          <h4>初回の来館時間</h4>
+          <p><span class="ok">✓ 案内あり</span><br>初めての方には予約確定後にLINEで目安時間をご案内します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#fff; padding:60px 0;">
+    <div class="container" style="max-width:720px;">
+      <h2 class="section-title">初めての方によくある質問</h2>
+      <div class="faq-list" style="margin-top:40px;">
+        <div class="faq-item">
+          <div class="faq-q">体が硬くてもヨガはできますか？</div>
+          <div class="faq-a">もちろんです。「体が硬いから」とおっしゃる方の方が多いくらいです。ヨガは柔らかくなるための練習なので、今の状態は関係ありません。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">完全な初心者でも参加できますか？</div>
+          <div class="faq-a">はい、大歓迎です。初めての方に合わせてご案内しますので、「やったことない」は全く問題ありません。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">体験後に無理に続けるよう言われませんか？</div>
+          <div class="faq-a">言いません。体験後に継続についてご案内することはありますが、強引なお誘いは一切しておりません。「まず雰囲気だけ見たい」という方も大歓迎です。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">産後いつから参加できますか？</div>
+          <div class="faq-a">体の回復状況によって異なります。かかりつけ医にご確認いただいた上で、まずLINEでご相談ください。体の状態に合わせてご案内します。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">パパも参加できますか？</div>
+          <div class="faq-a">ベビーサイン体験会はパパのご参加も大歓迎です。申し込み時にパパ参加の旨をお知らせください。ヨガのパーソナルレッスンも対応しています。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">どのクラスか分からないときは？</div>
+          <div class="faq-a">「どのクラスか迷っています」とLINEでご連絡ください。お話を聞いた上で、一緒に確認します。</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:24px;">
+        <a href="faq.html" class="btn-text">すべての質問を見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクセス・予約 -->
+  <section style="background:var(--bg2); padding:60px 0;">
+    <div class="container" style="max-width:860px;">
+      <h2 class="section-title">アクセス・予約方法</h2>
+      <div class="access-grid">
+        <div class="access-info">
+          <h3 style="font-family:'Noto Serif JP',serif; font-size:1.05rem; margin-bottom:18px;">Studio Liko</h3>
+          <p>福岡県福岡市西区愛宕南2丁目12-12<br>&ensp;&ensp;&ensp;ユンゲルハイム姪浜 1F</p>
+          <p>姪浜駅より徒歩圏内</p>
+          <p>🚗 駐車場は事前にご確認ください</p>
+          <p style="margin-top:16px; font-size:0.85rem; color:var(--text-light); line-height:2;">西区・早良区・城南区・糸島方面など<br>幅広いエリアからご来館いただいています。</p>
+        </div>
+        <div class="map-placeholder" style="overflow:hidden; border-radius:10px;">
+          <iframe
+            src="https://maps.google.com/maps?q=福岡県福岡市西区愛宕南2丁目12-12&output=embed&z=16"
+            width="100%" height="320" style="border:0; display:block;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="reassure-box">
+        <h3>予約は、LINEが一番かんたんです</h3>
+        <p>「体験したい」「どのクラスか迷っています」<br>そんな一言で大丈夫です。難しく考えなくてOK。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>まずはLINEで気軽にご連絡ください</h2>
+      <p>「気になるだけ」「どのクラスか迷っている」という段階でも大丈夫です。<br>丁寧にお答えします。</p>
+      <div class="cta-btns">
+        <a href="https://page.line.me/ttp2821f" class="btn-line">
+          <span>LINE</span>
+          <span>LINEでお気軽に相談する</span>
+        </a>
+        <a href="https://naturalroom.official.jp/%e3%81%94%e4%ba%88%e7%b4%84/" class="btn-yoyaku" target="_blank" rel="noopener">ご予約フォームから予約する</a>
+      </div>
+      <p class="cta-address">福岡市西区愛宕南2丁目12-12（姪浜エリア）</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
+      <p style="margin-top:8px;">
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
+        <a href="guide.html">初めての方へ</a> &nbsp;|&nbsp;
+        <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
+        <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
+        <a href="sns.html">公式SNS</a>
+      </p>
+      <p style="margin-top:12px;">© 2024 Studio Liko All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="sticky-cta">
+    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

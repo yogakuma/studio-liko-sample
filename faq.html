@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくある質問 | Studio Liko</title>
+  <meta name="description" content="Studio Likoのよくある質問。ベビーサインの対象月齢・料金・振替・赤ちゃん連れヨガ・持ち物・駐車場など、初めての方の不安にお答えします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Noto Sans JP',sans-serif;color:#3a3228;background:#f8f6f2;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+    :root{--yoga:#6b8f71;--yoga-dark:#4a6b50;--yoga-light:#e8f0e9;--babysign:#d9738a;--babysign-dark:#b5566e;--babysign-light:#fceef1;--bg:#f8f6f2;--bg2:#f0ece5;--text:#3a3228;--text-light:#6b5c50;--border:#e8e2da;--radius:8px}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
+    .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
+    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
+    .page-hero.faq-hero{background:linear-gradient(135deg,var(--bg2),#f0ede8)}
+    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
+    .page-hero p{color:var(--text-light);font-size:.95rem}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
+      .nav.open{right:0}
+      .nav ul{flex-direction:column;gap:0;align-items:flex-start}
+      .nav ul li{width:100%;border-bottom:1px solid var(--border)}
+      .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
+      .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+      body{padding-bottom:66px}
+      .page-hero{padding:100px 24px 48px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">Studio Liko</span>
+        <span class="logo-en">福岡市西区 姪浜</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="babysign.html">ベビーサイン</a></li>
+          <li><a href="yoga.html">ヨガ</a></li>
+          <li><a href="voice.html">受講者の声</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="faq.html" style="color:var(--yoga);font-weight:700;">よくある質問</a></li>
+          <li><a href="index.html#contact" class="btn-nav">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ページヘロー -->
+  <div class="page-hero faq-hero">
+    <h1>よくある質問</h1>
+    <p>「こんなこと聞いていいのかな」と思うことも、ここにまとめています。<br>ここにない場合は、気軽にLINEで聞いてください。</p>
+  </div>
+  <div class="breadcrumb">
+    <a href="index.html">トップ</a>
+    <span>›</span>
+    <span>よくある質問</span>
+  </div>
+
+  <!-- FAQ本体 -->
+  <section class="faq-page">
+    <div class="container" style="max-width:860px;">
+
+      <!-- ベビーサインについて -->
+      <div class="faq-category">
+        <div class="faq-category-title bs-title">ベビーサインクラスについて</div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q">何ヶ月から参加できますか？</div>
+            <div class="faq-a">赤ちゃんの発達に合わせて、ねんね期から参加できる講座があります。ねんねの赤ちゃん講座（0〜8ヶ月頃まで）、ハイハイからの赤ちゃん講座（8ヶ月〜2歳頃まで）の2つのクラスをご用意しています。「まだ早いかな？」という段階でも、お気軽にご相談ください。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">ベビーサインは言葉の発達に影響しませんか？</div>
+            <div class="faq-a">よく聞かれるご質問ですが、言葉の遅れにつながるということはありません。むしろ、コミュニケーションへの意欲が高まることで言語発達をサポートするという報告もあります。安心して始めていただけます。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">赤ちゃんがぐずっても大丈夫ですか？</div>
+            <div class="faq-a">もちろん大丈夫です。泣いても、ぐずっても、動き回っても、それが赤ちゃんです。Studio Likoは赤ちゃん連れのママさんが安心して過ごせる場所でありたいと思っています。焦らず、ゆったりした気持ちでお越しください。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">夫（パパ）も一緒に参加できますか？</div>
+            <div class="faq-a">パパのご参加もご相談可能です。パパもサインを覚えると、家での赤ちゃんとのやりとりが楽しくなります。人数や料金が変わる場合がありますので、お申し込み時にお知らせください。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">授乳中でも参加できますか？</div>
+            <div class="faq-a">はい、参加いただけます。授乳ケープをお持ちいただければ、スタジオ内でご利用いただけます。遠慮なくお声がけください。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">体調不良や急用で参加できなくなった場合はどうなりますか？</div>
+            <div class="faq-a">ベビーサイン講座は、体調不良や里帰りなどやむを得ない事情でご参加できない場合に振替が可能です。詳しい条件やご予約のタイミングについては、お申し込み時にご確認ください。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ヨガについて -->
+      <div class="faq-category">
+        <div class="faq-category-title">ヨガクラスについて</div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q">体が硬くてもヨガはできますか？</div>
+            <div class="faq-a">大丈夫です。「体が硬いからヨガは無理」と思っている方ほど、来てみてほしいです。ヨガは柔らかくなるための練習なので、今の状態がどうかは関係ありません。少人数なので、一人ひとりに合わせてご案内します。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">ヨガ初心者でも大丈夫ですか？</div>
+            <div class="faq-a">もちろんです。初めての方も、経験者の方も、同じクラスで無理なく参加できます。「初めてで恥ずかしい」という心配は不要です。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">産後間もないですが参加できますか？</div>
+            <div class="faq-a">産後の体の回復状況によって異なります。まずかかりつけ医にご確認いただいた上で、ご相談ください。マタニティ・産後ヨガの経験がありますので、体の状態に合わせてご案内します。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">赤ちゃんを連れてヨガに参加できますか？</div>
+            <div class="faq-a">産後ヨガはお子さま連れでご参加いただけます。通常のヨガクラスはお子さま連れ不可となります。産後ヨガへのお子さまのご参加は1歳まで、1歳以上のお子さまをお連れの場合はご相談ください。※託児付きではありません。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 施設・アクセスについて -->
+      <div class="faq-category">
+        <div class="faq-category-title facility-title">施設・アクセスについて</div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q">駐車場はありますか？</div>
+            <div class="faq-a">駐車場についてはお問い合わせの際にご確認ください。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">持ち物は何が必要ですか？</div>
+            <div class="faq-a">ヨガ体験は「動きやすい服装・飲み物・タオル・体験料」をご持参ください。ベビーサイン体験会は、赤ちゃん連れの外出に必要なものをお持ちいただければ大丈夫です。詳しくはお申し込み後にご案内します。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">授乳室はありますか？</div>
+            <div class="faq-a">専用の授乳室はご用意していませんが、授乳ケープをお持ちいただければスタジオ内でご利用いただいています。ご遠慮なくお申し付けください。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">体験レッスンはありますか？</div>
+            <div class="faq-a">はい、体験レッスンを受け付けています。「まずどんな雰囲気か知りたい」という段階でも、気軽にご連絡ください。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">体験の料金はいくらですか？</div>
+            <div class="faq-a">ヨガ体験は1,500円、ベビーサイン体験会は2,200円です。講座料金はクラスによって異なりますので、詳細は各ページまたはLINEでご確認ください。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- まだ解決しない方へ -->
+      <div style="background:var(--yoga-light); border-radius:12px; padding:32px 40px; text-align:center; margin-top:40px;">
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:1.1rem; margin-bottom:12px; color:var(--yoga-dark);">ここにない質問は、LINEで気軽に聞いてください</h3>
+        <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:24px;">「こんなこと聞いていいのかな？」と思うような内容でも、丁寧にお答えします。</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://page.line.me/ttp2821f" class="btn-line" style="background:#06C755; color:#fff; padding:12px 24px; border-radius:30px; font-size:0.88rem; display:flex; gap:6px; align-items:center;">
+            <span>LINE</span><span>LINEで聞いてみる</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>体験レッスン・体験会のご予約はこちら</h2>
+      <p>まずはLINEで気軽にご連絡ください。</p>
+      <div class="cta-btns">
+        <a href="https://page.line.me/ttp2821f" class="btn-line">
+          <span>LINE</span>
+          <span>LINEでお気軽に相談する</span>
+        </a>
+        <a href="https://naturalroom.official.jp/%e3%81%94%e4%ba%88%e7%b4%84/" class="btn-yoyaku" target="_blank" rel="noopener">ご予約フォームから予約する</a>
+      </div>
+      <p class="cta-address">福岡市西区愛宕南2丁目12-12（姪浜エリア）</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
+      <p style="margin-top:8px;">
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
+        <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
+        <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
+        <a href="sns.html">公式SNS</a>
+      </p>
+      <p style="margin-top:12px;">© 2024 Studio Liko All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="sticky-cta">
+    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
