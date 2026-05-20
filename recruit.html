@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>講師募集 | Studio Liko</title>
+  <meta name="description" content="Studio Likoではヨガ・ベビーサインの講師を募集しています。少人数制・アットホームな環境でいっしょに働きませんか。福岡市西区姪浜。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Noto Sans JP',sans-serif;color:#3a3228;background:#f8f6f2;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+    :root{--yoga:#6b8f71;--yoga-dark:#4a6b50;--yoga-light:#e8f0e9;--babysign:#d9738a;--babysign-dark:#b5566e;--babysign-light:#fceef1;--bg:#f8f6f2;--bg2:#f0ece5;--text:#3a3228;--text-light:#6b5c50;--border:#e8e2da;--radius:8px}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
+    .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
+    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
+    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
+    .page-hero p{color:var(--text-light);font-size:.95rem}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
+      .nav.open{right:0}
+      .nav ul{flex-direction:column;gap:0;align-items:flex-start}
+      .nav ul li{width:100%;border-bottom:1px solid var(--border)}
+      .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
+      .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+      body{padding-bottom:66px}
+      .page-hero{padding:100px 24px 48px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">Studio Liko</span>
+        <span class="logo-en">Yoga &amp; Baby Sign</span>
+      </a>
+      <nav class="nav" id="globalNav">
+        <ul>
+          <li><a href="yoga.html">ヨガ</a></li>
+          <li><a href="babysign.html">ベビーサイン</a></li>
+          <li><a href="voice.html">受講者の声</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="index.html#contact" class="btn-nav">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>講師募集</h1>
+      <p>Studio Likoでいっしょに働きませんか</p>
+    </section>
+
+    <!-- 募集の背景 -->
+    <section style="padding:80px 0; background:#fff;">
+      <div class="container" style="max-width:760px;">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.4rem; font-weight:600; margin-bottom:24px;">ヨガが好きな方、一緒に教室を育てませんか</h2>
+        <p style="font-size:0.95rem; color:var(--text-light); line-height:2.2; margin-bottom:20px;">
+          Studio Likoは、福岡市西区姪浜で「ヨガ・ベビーサイン」を通じてママと赤ちゃんの笑顔を増やしてきた少人数制スタジオです。
+        </p>
+        <p style="font-size:0.95rem; color:var(--text-light); line-height:2.2; margin-bottom:20px;">
+          「もっと多くの方にヨガを届けたい」という思いから、講師を募集しています。
+          資格の種類よりも、人と向き合うことへの誠実さとヨガへの情熱を大切にしています。
+        </p>
+        <p style="font-size:0.95rem; color:var(--text-light); line-height:2.2;">
+          まずは気軽にご連絡ください。詳細はLINEまたはメールでお伝えします。
+        </p>
+      </div>
+    </section>
+
+    <!-- 募集内容 -->
+    <section style="padding:80px 0; background:var(--bg2);">
+      <div class="container" style="max-width:760px;">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.3rem; font-weight:600; margin-bottom:40px; text-align:center;">募集内容</h2>
+        <table style="width:100%; border-collapse:collapse; font-size:0.9rem; background:#fff; border-radius:12px; overflow:hidden; border:1px solid var(--border);">
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:18px 24px; text-align:left; width:30%; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500; white-space:nowrap;">募集職種</th>
+              <td style="padding:18px 24px; color:var(--text);">ヨガインストラクター</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:18px 24px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">勤務地</th>
+              <td style="padding:18px 24px; color:var(--text);">福岡市西区愛宕南2丁目12-12（姪浜エリア）</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:18px 24px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">応募資格</th>
+              <td style="padding:18px 24px; color:var(--text);">ヨガの指導経験がある方、または資格取得済みの方<br><span style="font-size:0.85rem; color:var(--text-light);">※経験・資格の種類は問いません。まずご相談ください。</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:18px 24px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">雇用形態</th>
+              <td style="padding:18px 24px; color:var(--text);">業務委託<br><span style="font-size:0.85rem; color:var(--text-light);">※詳細はご相談ください</span></td>
+            </tr>
+            <tr>
+              <th style="padding:18px 24px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">応募方法</th>
+              <td style="padding:18px 24px; color:var(--text);">公式LINEまたは下記メールアドレスへご連絡ください</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.8rem; color:var(--text-light); margin-top:16px; text-align:center;">※ 掲載内容は変更になる場合があります。最新情報はLINEにてご確認ください。</p>
+      </div>
+    </section>
+
+    <!-- 応募CTA -->
+    <section style="padding:80px 0; text-align:center; background:#fff;">
+      <div class="container">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.2rem; font-weight:600; margin-bottom:12px;">まずはLINEでご連絡ください</h2>
+        <p style="font-size:0.88rem; color:var(--text-light); margin-bottom:32px; line-height:2;">「講師応募について聞きたい」と一言送っていただくだけで大丈夫です。</p>
+        <a href="https://page.line.me/ttp2821f" style="display:inline-flex; align-items:center; gap:10px; background:#06C755; color:#fff; padding:14px 32px; border-radius:30px; font-size:0.92rem; font-weight:500; letter-spacing:0.04em; text-decoration:none;" target="_blank" rel="noopener">
+          LINEで応募について相談する
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
+      <p style="margin-top:8px;">
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
+        <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
+        <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
+        <a href="sns.html">公式SNS</a> &nbsp;|&nbsp;
+        <a href="recruit.html">講師募集</a>
+      </p>
+      <p style="margin-top:12px;">© 2024 Studio Liko All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="sticky-cta">
+    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
