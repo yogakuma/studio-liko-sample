@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>講師育成・養成講座 | Studio Liko</title>
+  <meta name="description" content="Studio Likoの講師育成プログラム。ベーシックヨガインストラクター養成講座・ベビーサイン講師育成。福岡市西区姪浜。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Noto Sans JP',sans-serif;color:#3a3228;background:#f8f6f2;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+    :root{--yoga:#6b8f71;--yoga-dark:#4a6b50;--yoga-light:#e8f0e9;--babysign:#d9738a;--babysign-dark:#b5566e;--babysign-light:#fceef1;--bg:#f8f6f2;--bg2:#f0ece5;--text:#3a3228;--text-light:#6b5c50;--border:#e8e2da;--radius:8px}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
+    .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
+    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+    .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
+    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
+    .page-hero p{color:var(--text-light);font-size:.95rem}
+    .confirm-box{background:#fff8e8;border-left:3px solid #e0a030;border-radius:0 8px 8px 0;padding:14px 18px;font-size:0.82rem;color:#7a5a20;margin:16px 0;line-height:1.9}
+    .confirm-box strong{display:block;margin-bottom:4px;font-size:0.8rem;letter-spacing:0.06em;}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
+      .nav.open{right:0}
+      .nav ul{flex-direction:column;gap:0;align-items:flex-start}
+      .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
+      .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+      body{padding-bottom:66px}
+      .page-hero{padding:100px 24px 48px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-ja">Studio Liko</span>
+        <span class="logo-en">Yoga &amp; Baby Sign</span>
+      </a>
+      <nav class="nav" id="globalNav">
+        <ul>
+          <li><a href="yoga.html">ヨガ</a></li>
+          <li><a href="babysign.html">ベビーサイン</a></li>
+          <li><a href="voice.html">受講者の声</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="index.html#contact" class="btn-nav">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>講師育成・養成講座</h1>
+      <p>ヨガ・ベビーサインの講師を目指す方へ</p>
+    </section>
+
+    <!-- リード -->
+    <section style="padding:80px 0; background:#fff;">
+      <div class="container" style="max-width:760px;">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.4rem; font-weight:600; margin-bottom:24px;">「伝える側」になりたい方へ</h2>
+        <p style="font-size:0.95rem; color:var(--text-light); line-height:2.2; margin-bottom:20px;">
+          Studio Likoでは、ヨガやベビーサインを「教える立場」を目指す方のための育成プログラムを行っています。
+        </p>
+        <p style="font-size:0.95rem; color:var(--text-light); line-height:2.2;">
+          代表・岩本理子が全米ヨガアライアンスRYT500・ベビーサインマスター講師として培ってきた知識と経験をもとに、丁寧な指導を行います。
+        </p>
+        <div class="confirm-box">
+          <strong>▼ MTGで確認</strong>
+          講師育成ページを追加する意図・ターゲット（社内育成か外部募集か）を確認する
+        </div>
+      </div>
+    </section>
+
+    <!-- ヨガ養成講座 -->
+    <section style="padding:80px 0; background:var(--bg2);">
+      <div class="container" style="max-width:760px;">
+        <span style="display:inline-block; background:var(--yoga); color:#fff; font-size:0.75rem; padding:4px 14px; border-radius:14px; margin-bottom:20px; letter-spacing:0.06em;">YOGA</span>
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.3rem; font-weight:600; margin-bottom:24px;">ベーシックヨガインストラクター養成講座</h2>
+        <p style="font-size:0.95rem; color:var(--text-light); line-height:2.2; margin-bottom:28px;">
+          ヨガを「自分のために」だけでなく「誰かに伝えるために」学びたい方のための養成講座です。
+          基礎から丁寧に学べる少人数制のカリキュラムです。
+        </p>
+
+        <table style="width:100%; border-collapse:collapse; font-size:0.9rem; background:#fff; border-radius:12px; overflow:hidden; border:1px solid var(--border);">
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; width:32%; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500; white-space:nowrap;">対象</th>
+              <td style="padding:16px 20px; color:var(--text);">ヨガ経験者・初心者問わず<br><span style="font-size:0.82rem; color:var(--text-light);">※詳細はMTGで確認</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">期間・回数</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">料金</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">取得できる資格</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+            <tr>
+              <th style="padding:16px 20px; text-align:left; background:var(--yoga-light); color:var(--yoga-dark); font-weight:500;">次回開催</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="confirm-box" style="margin-top:20px;">
+          <strong>▼ MTGで確認（ヨガ養成）</strong>
+          期間・回数・料金・取得資格の正式名称・次回開催日・定員・申込方法
+        </div>
+      </div>
+    </section>
+
+    <!-- ベビーサイン講師育成 -->
+    <section style="padding:80px 0; background:#fff;">
+      <div class="container" style="max-width:760px;">
+        <span style="display:inline-block; background:var(--babysign); color:#fff; font-size:0.75rem; padding:4px 14px; border-radius:14px; margin-bottom:20px; letter-spacing:0.06em;">BABY SIGN</span>
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.3rem; font-weight:600; margin-bottom:24px;">ベビーサイン講師育成</h2>
+        <p style="font-size:0.95rem; color:var(--text-light); line-height:2.2; margin-bottom:28px;">
+          「ベビーサインの素晴らしさをもっと多くの親子に届けたい」という方のための講師育成プログラムです。
+          福岡唯一のベビーサインマスター講師・岩本理子が指導します。
+        </p>
+
+        <table style="width:100%; border-collapse:collapse; font-size:0.9rem; background:var(--bg2); border-radius:12px; overflow:hidden; border:1px solid var(--border);">
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; width:32%; background:var(--babysign-light); color:var(--babysign-dark); font-weight:500; white-space:nowrap;">対象</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; background:var(--babysign-light); color:var(--babysign-dark); font-weight:500;">期間・回数</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; background:var(--babysign-light); color:var(--babysign-dark); font-weight:500;">料金</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <th style="padding:16px 20px; text-align:left; background:var(--babysign-light); color:var(--babysign-dark); font-weight:500;">取得できる資格</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+            <tr>
+              <th style="padding:16px 20px; text-align:left; background:var(--babysign-light); color:var(--babysign-dark); font-weight:500;">次回開催</th>
+              <td style="padding:16px 20px; color:var(--text-light); font-style:italic;">▼ MTGで確認予定</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="confirm-box" style="margin-top:20px;">
+          <strong>▼ MTGで確認（ベビーサイン講師育成）</strong>
+          日本ベビーサイン協会との関係・資格の正式名称・受講条件・料金・次回開催・定員・申込方法
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding:80px 0; text-align:center; background:var(--bg2);">
+      <div class="container">
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:1.2rem; font-weight:600; margin-bottom:12px;">まずはLINEでご相談ください</h2>
+        <p style="font-size:0.88rem; color:var(--text-light); margin-bottom:32px; line-height:2;">「養成講座について聞きたい」と一言送っていただくだけで大丈夫です。</p>
+        <a href="https://page.line.me/ttp2821f" style="display:inline-flex; align-items:center; gap:10px; background:#06C755; color:#fff; padding:14px 32px; border-radius:30px; font-size:0.92rem; font-weight:500; letter-spacing:0.04em; text-decoration:none;" target="_blank" rel="noopener">
+          LINEで養成講座について相談する
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
+      <p style="margin-top:8px;">
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
+        <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
+        <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
+        <a href="sns.html">公式SNS</a> &nbsp;|&nbsp;
+        <a href="training.html">講師育成</a>
+      </p>
+      <p style="margin-top:12px;">© 2024 Studio Liko All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="sticky-cta">
+    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
