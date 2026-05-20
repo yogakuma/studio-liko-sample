@@ -1236,14 +1236,14 @@ footer a { color: rgba(255,255,255,0.7); }
     color: var(--yoga-dark);
   }
   .entry-card.bs-entry .entry-card-label .label-ja {
-    background: #f2c8d4;
-    color: var(--babysign-dark);
+    background: #f0e8b0;
+    color: #7a6a20;
   }
   /* タップ時に少し濃く */
   .entry-card.yoga-entry:active .entry-card-label .label-sp-title { background: #f0f5f0; }
   .entry-card.yoga-entry:active .entry-card-label .label-ja { background: #afc8b1; }
   .entry-card.bs-entry:active .entry-card-label .label-sp-title { background: #fdf0f3; }
-  .entry-card.bs-entry:active .entry-card-label .label-ja { background: #e8b0c0; }
+  .entry-card.bs-entry:active .entry-card-label .label-ja { background: #e0d890; }
   .entry-card-label .label-arrow { display: none; }
 }
 
