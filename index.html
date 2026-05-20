@@ -23,35 +23,27 @@
     .logo{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
     .logo-ja{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;letter-spacing:.1em}
     .logo-en{font-size:.6rem;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase}
-    .nav ul{display:flex;gap:24px;list-style:none;align-items:center}
-    .nav a{font-size:.85rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
-    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.82rem}
+    .nav ul{display:flex;gap:20px;list-style:none;align-items:center}
+    .nav a{font-size:.82rem;letter-spacing:.04em;transition:color .2s;white-space:nowrap}
+    .btn-nav{background:var(--yoga);color:#fff!important;padding:8px 18px;border-radius:20px;font-size:.8rem}
     .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:200;flex-shrink:0}
     .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
     .nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:90}
     .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150}
+    /* FV */
     .fv-hero{position:relative;min-height:100vh;display:flex!important;align-items:center;overflow:hidden;padding-top:0}
     .fv-hero::before,.fv-hero::after{display:none}
     .fv-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% center;z-index:0;display:block;max-width:none}
-    .fv-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(15,8,4,.72) 0%,rgba(15,8,4,.44) 48%,rgba(15,8,4,.04) 100%);z-index:1}
-    .fv-hero-left{position:relative;z-index:2;padding:120px clamp(24px,3.5vw,56px) 60px clamp(24px,5vw,88px);max-width:700px}
-    .fv-badge{display:inline-block;background:var(--yoga);color:#fff;font-size:.78rem;padding:4px 16px;border-radius:20px;letter-spacing:.06em;margin-bottom:20px}
-    .fv-title{font-family:'Noto Serif JP',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:600;line-height:1.5;margin-bottom:20px;color:var(--text)}
-    .fv-hero .fv-title{color:#fff;font-size:clamp(1.8rem,2.8vw,2.3rem);text-shadow:0 1px 14px rgba(0,0,0,.28)}
-    .fv-hero .fv-title .fv-sub-line{color:rgba(255,255,255,.82)}
-    .fv-hero .fv-text{color:rgba(255,255,255,.88)}
-    .fv-guide-link{color:rgba(255,255,255,.72)!important}
-    .fv-text{font-size:1rem;color:var(--text-light);margin-bottom:36px;line-height:2.2}
-    .fv-btns{display:flex;gap:16px;flex-wrap:wrap}
+    .fv-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(12,6,3,.76) 0%,rgba(12,6,3,.46) 48%,rgba(12,6,3,.06) 100%);z-index:1}
+    .fv-hero-left{position:relative;z-index:2;padding:140px clamp(24px,3.5vw,56px) 80px clamp(24px,5vw,88px);max-width:680px}
+    .fv-badge{display:inline-block;background:var(--yoga);color:#fff;font-size:.78rem;padding:4px 16px;border-radius:20px;letter-spacing:.06em;margin-bottom:22px}
+    .fv-title{font-family:'Noto Serif JP',serif;font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:600;line-height:1.6;margin-bottom:22px;color:#fff;letter-spacing:.04em;text-shadow:0 1px 16px rgba(0,0,0,.3)}
+    .fv-title .fv-sub-line{display:block;font-size:.68em;font-weight:400;color:rgba(255,255,255,.8);margin-top:10px;line-height:1.85;letter-spacing:.03em}
+    .fv-text{font-size:.92rem;color:rgba(255,255,255,.85);margin-bottom:36px;line-height:2.3}
+    .fv-btns{display:flex;gap:14px;flex-wrap:wrap}
     .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-size:.9rem;font-weight:500;letter-spacing:.04em;transition:all .2s;cursor:pointer}
     .btn-yoga{background:var(--yoga);color:#fff}
     .btn-babysign{background:#fff;color:var(--babysign);border:2px solid var(--babysign)}
-    .page-hero{padding:120px 24px 60px;background:linear-gradient(135deg,var(--yoga-light),var(--bg2));text-align:center}
-    .page-hero.bs-hero{background:linear-gradient(135deg,var(--babysign-light),#f8f4f4)}
-    .page-hero.profile-hero{background:linear-gradient(135deg,#f0ede8,var(--yoga-light))}
-    .page-hero.faq-hero{background:linear-gradient(135deg,var(--bg2),#f0ede8)}
-    .page-hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;margin-bottom:12px}
-    .page-hero p{color:var(--text-light);font-size:.95rem}
     @media(max-width:768px){
       .hamburger{display:flex}
       .nav{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:var(--bg);padding:72px 28px 28px;transition:right .3s ease;box-shadow:-8px 0 24px rgba(0,0,0,.08);z-index:100;overflow-y:auto}
@@ -60,102 +52,18 @@
       .nav ul li{width:100%;border-bottom:1px solid var(--border)}
       .nav a:not(.btn-nav){display:block;padding:15px 0;font-size:.95rem}
       .btn-nav{display:inline-block;margin:16px 0 0;padding:10px 20px}
-      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none;padding:10px 16px 14px;background:rgba(248,246,242,.97);backdrop-filter:blur(6px);border-top:1px solid var(--border)}
+      .sticky-cta{display:block;opacity:0;transform:translateY(100%);transition:opacity .4s ease,transform .4s ease;pointer-events:none}
       .sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
-      body{padding-bottom:66px}
+      body{padding-bottom:70px}
+      /* モバイルFV：写真上・カード浮かせ */
       .fv-hero{display:block!important;min-height:auto;background:none!important;overflow:visible;padding-top:0}
-      .fv-hero-bg{display:block!important;position:static!important;width:100%;height:60vw;max-height:220px;object-fit:cover;object-position:54% center;max-width:none}
+      .fv-hero-bg{display:block!important;position:static!important;width:100%;height:62vw;max-height:240px;object-fit:cover;object-position:54% center;max-width:none}
       .fv-hero-overlay{display:none!important}
-      .fv-hero-left{position:relative!important;z-index:10;margin-top:-36px;padding:20px 22px 40px;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 -6px 28px rgba(0,0,0,.08);max-width:100%}
-      .fv-hero .fv-badge{margin-bottom:14px}
-      .fv-hero .fv-title{color:var(--text);font-size:1.48rem;line-height:1.75;text-shadow:none;margin-bottom:10px}
-      .fv-hero .fv-title br{display:none}
-      .fv-hero .fv-title .fv-sub-line{color:var(--text-light);margin-top:10px;line-height:1.8}
-      .fv-hero .fv-text{color:var(--text-light);font-size:.9rem;line-height:2;margin-top:14px}
-      .fv-hero .fv-text br{display:none}
-      .fv-hero .fv-btns{gap:10px;margin-top:22px}
-      .fv-guide-link{color:var(--text-light)!important}
-      .page-hero{padding:100px 24px 48px}
-    }
-  </style>
-  <style>
-    /* ===== FVタイトル調整 ===== */
-    .fv-title {
-      font-size: clamp(1.7rem, 4vw, 2.8rem);
-      line-height: 1.65;
-    }
-    .fv-title .fv-sub-line {
-      display: block;
-      font-size: 0.7em;
-      font-weight: 400;
-      color: var(--text-light);
-      letter-spacing: 0.04em;
-      margin-top: 8px;
-    }
-
-    /* ===== トラックカード（絵文字なし版） ===== */
-    .track-card-v2 {
-      padding: 44px 36px;
-      border-radius: 12px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--babysign);
-      transition: box-shadow 0.2s;
-    }
-    .track-card-v2.yoga-card-v2 { border-top-color: var(--yoga); }
-    .track-card-v2:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
-    .track-card-v2 h3 {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
-    .track-card-v2 p {
-      font-size: 0.92rem;
-      color: var(--text-light);
-      line-height: 2;
-      margin-bottom: 20px;
-    }
-    .track-class-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 24px;
-      font-size: 0.84rem;
-      color: var(--text-light);
-      border-top: 1px solid var(--border);
-      padding-top: 16px;
-    }
-    .track-class-list li {
-      padding: 5px 0;
-      padding-left: 14px;
-      position: relative;
-    }
-    .track-class-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 14px;
-      width: 5px;
-      height: 1px;
-      background: var(--babysign);
-    }
-    .track-card-v2.yoga-card-v2 .track-class-list li::before { background: var(--yoga); }
-
-    /* ===== セクション余白増し ===== */
-    .section-spacious { padding: 100px 0; }
-
-    /* ===== プロフィールカード調整 ===== */
-    .profile-img-round-v2 {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #dceade, #fde8ee);
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
+      .fv-hero-left{position:relative!important;z-index:10;margin-top:-40px;padding:22px 22px 44px;background:#fff;border-radius:22px 22px 0 0;box-shadow:0 -8px 28px rgba(0,0,0,.09);max-width:100%}
+      .fv-title{color:var(--text);font-size:1.5rem;line-height:1.7;text-shadow:none;margin-bottom:10px;letter-spacing:.02em}
+      .fv-title .fv-sub-line{color:var(--text-light);margin-top:10px}
+      .fv-text{color:var(--text-light);font-size:.88rem;line-height:2;margin-top:14px}
+      .fv-btns{gap:10px;margin-top:22px}
     }
   </style>
 </head>
@@ -168,10 +76,11 @@
         <span class="logo-ja">Studio Liko</span>
         <span class="logo-en">福岡市西区 姪浜</span>
       </a>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul>
           <li><a href="yoga.html">ヨガ</a></li>
           <li><a href="babysign.html">ベビーサイン</a></li>
+          <li><a href="training.html">講師育成</a></li>
           <li><a href="voice.html">受講者の声</a></li>
           <li><a href="profile.html">プロフィール</a></li>
           <li><a href="faq.html">よくある質問</a></li>
@@ -186,7 +95,7 @@
 
   <main>
 
-  <!-- ===== FV ===== -->
+  <!-- ===== 1. FV ===== -->
   <section class="fv fv-hero">
     <picture>
       <source media="(max-width: 768px)" srcset="img/fv_main_sp.webp" type="image/webp">
@@ -195,142 +104,332 @@
     </picture>
     <div class="fv-hero-overlay"></div>
     <div class="fv-hero-left">
-      <div class="fv-hero-text">
-        <span class="fv-badge">福岡市西区 愛宕南・姪浜エリア</span>
-        <h1 class="fv-title">
-          ヨガで、自分を取り戻す時間を。
-          <span class="fv-sub-line">ベビーサインで、赤ちゃんの気持ちが分かるようになる。<br>姪浜の少人数制スタジオ。</span>
-        </h1>
-        <p class="fv-text">
-          ヨガは初心者・マタニティ・産後・シニアまで対応。<br>
-          ベビーサインはねんね期から。月齢に合わせたクラスをご用意。<br>
-          自分のペースで、ほっとできる場所があります。
-        </p>
-        <div class="fv-btns">
-          <a href="yoga.html" class="btn btn-yoga">ヨガをもっと知る</a>
-          <a href="babysign.html" class="btn btn-babysign">ベビーサインをもっと知る</a>
-        </div>
-        <p style="margin-top:18px; font-size:0.84rem;">
-          <a href="guide.html" class="fv-guide-link" style="text-decoration:underline; text-underline-offset:4px; letter-spacing:0.02em;">初めての方はこちら（体験の流れ・料金・持ち物） →</a>
-        </p>
+      <span class="fv-badge">福岡市西区 愛宕南・姪浜エリア</span>
+      <h1 class="fv-title">
+        ヨガで、自分を取り戻す時間を。
+        <span class="fv-sub-line">ベビーサインで、赤ちゃんの気持ちが分かるようになる。<br>姪浜の少人数制スタジオ。</span>
+      </h1>
+      <p class="fv-text">
+        ヨガは初心者・マタニティ・産後・シニアまで対応。<br>
+        ベビーサインはねんね期から。月齢に合わせたクラスをご用意。
+      </p>
+      <div class="fv-btns">
+        <a href="yoga.html" class="btn btn-yoga">ヨガをもっと知る</a>
+        <a href="babysign.html" class="btn btn-babysign">ベビーサインをもっと知る</a>
+      </div>
+      <p style="margin-top:18px;font-size:.83rem;">
+        <a href="guide.html" style="color:rgba(255,255,255,.72);text-decoration:underline;text-underline-offset:4px;letter-spacing:.02em;">初めての方はこちら（体験の流れ・料金・持ち物） →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 2. 入口カード（ヨガ／ベビーサイン） ===== -->
+  <section class="entry-section section-spacious">
+    <div class="container">
+      <h2 class="section-title">Studio Likoのレッスン</h2>
+      <p class="section-lead">ヨガとベビーサイン、どちらからでも始められます。</p>
+      <div class="entry-grid">
+
+        <a href="yoga.html" class="entry-card yoga-entry">
+          <picture>
+            <source srcset="img/profile.webp" type="image/webp">
+            <img src="img/profile.png" alt="ヨガクラス">
+          </picture>
+          <div class="entry-card-overlay"></div>
+          <div class="entry-card-label">
+            <span class="label-en">Yoga</span>
+            <span class="label-ja">ヨガ</span>
+            <span class="label-arrow">クラスを見る →</span>
+          </div>
+        </a>
+
+        <a href="babysign.html" class="entry-card bs-entry">
+          <picture>
+            <source srcset="img/babysign_mama.webp" type="image/webp">
+            <img src="img/babysign_mama.png" alt="ベビーサインクラス">
+          </picture>
+          <div class="entry-card-overlay"></div>
+          <div class="entry-card-label">
+            <span class="label-en">Baby Sign</span>
+            <span class="label-ja">ベビーサイン</span>
+            <span class="label-arrow">クラスを見る →</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- ===== 2つの入口 ===== -->
-  <section class="two-tracks section-spacious">
+  <!-- ===== 3. スケジュール導線 ===== -->
+  <section class="schedule-section section-spacious">
     <div class="container">
-      <h2 class="section-title">Studio Likoのレッスン</h2>
-      <p class="section-lead">
-        ベビーサインとヨガ、どちらからでも始められます。<br>
-        初めての方を、先生が丁寧にお迎えします。
-      </p>
-      <div class="tracks-grid">
+      <h2 class="section-title">クラスのスケジュール</h2>
+      <p class="section-lead">最新のスケジュールはこちらからご確認いただけます。</p>
+      <div class="schedule-grid">
 
-        <div class="track-card-v2 yoga-card-v2">
+        <div class="schedule-card yoga-sch">
+          <div class="schedule-card-header">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--yoga);"></span>
+            ヨガ クラス スケジュール
+          </div>
+          <div class="schedule-img-area">
+            <!-- 画像が届いたらここに <img src="img/schedule_yoga.jpg" alt="ヨガスケジュール"> を差し替え -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="opacity:.4"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>スケジュール画像<br>（準備中）</span>
+          </div>
+          <div class="schedule-card-footer">
+            <a href="yoga.html" class="btn-text">ヨガのスケジュールを確認する →</a>
+          </div>
+        </div>
+
+        <div class="schedule-card bs-sch">
+          <div class="schedule-card-header">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--babysign);"></span>
+            ベビーサイン クラス スケジュール
+          </div>
+          <div class="schedule-img-area">
+            <!-- 画像が届いたらここに <img src="img/schedule_bs.jpg" alt="ベビーサインスケジュール"> を差し替え -->
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="opacity:.4"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>スケジュール画像<br>（準備中）</span>
+          </div>
+          <div class="schedule-card-footer">
+            <a href="babysign.html" class="btn-text bs">ベビーサインのスケジュールを確認する →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. はじめての方へ / 体験予約バナー ===== -->
+  <section class="section-spacious" style="background:#fff;">
+    <div class="container">
+      <h2 class="section-title">はじめての方へ</h2>
+      <p class="section-lead">「どんな教室か気になる」という段階でも、お気軽にどうぞ。</p>
+      <div class="firsttime-grid">
+
+        <a href="guide.html" class="firsttime-card">
+          <div class="firsttime-card-bg yoga-bg"></div>
+          <div class="firsttime-card-content">
+            <h3>体験の流れ・料金・持ち物</h3>
+            <p>初めてでも安心して参加いただけるよう、体験の流れを丁寧にご説明しています。</p>
+            <span class="firsttime-arrow">詳しく見る →</span>
+          </div>
+        </a>
+
+        <a href="#contact" class="firsttime-card bs-card">
+          <div class="firsttime-card-bg bs-bg"></div>
+          <div class="firsttime-card-content">
+            <h3>体験予約受付中</h3>
+            <p>「まずどんな教室か知りたい」という段階でも大丈夫です。LINEからお気軽にご連絡ください。</p>
+            <span class="firsttime-arrow">LINEで相談する →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Studio Likoについて ===== -->
+  <section class="studio-about section-spacious">
+    <div class="container">
+      <p class="studio-about-logo">Studio Liko</p>
+      <h2 class="section-title">スタジオについて</h2>
+      <p class="studio-about-lead">
+        福岡市西区・姪浜エリアにある、ヨガとベビーサインの教室です。<br>
+        少人数制だから、一人ひとりに向き合えます。<br>
+        自分のペースで、ほっとできる場所があります。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 6. インストラクター紹介 ===== -->
+  <section class="profile-intro section-spacious" style="background:var(--bg2);">
+    <div class="container">
+      <h2 class="section-title">インストラクター</h2>
+      <div class="profile-card">
+        <div class="profile-img-round-v2" style="overflow:hidden;padding:0;background:var(--bg);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:.8rem;color:var(--text-light);">写真準備中</span>
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif JP',serif;font-size:1.3rem;margin-bottom:4px;">岩本 理子</h2>
+          <p style="font-size:.8rem;color:var(--text-light);margin-bottom:14px;letter-spacing:.06em;">Studio Liko 代表</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
+            <span style="background:var(--babysign-light);color:var(--babysign-dark);font-size:.7rem;padding:4px 12px;border-radius:20px;font-weight:500;">日本ベビーサイン協会認定マスター講師</span>
+            <span style="background:var(--yoga-light);color:var(--yoga-dark);font-size:.7rem;padding:4px 12px;border-radius:20px;font-weight:500;">全米ヨガアライアンスRYT500修了</span>
+            <span style="background:var(--bg);color:var(--text-light);font-size:.7rem;padding:4px 12px;border-radius:20px;font-weight:500;">3児の母</span>
+          </div>
+          <p class="profile-catch">「ヨガで癒しを、ベビーサインで<br>子育ての自信を届けたい。」</p>
+          <p style="font-size:.88rem;color:var(--text-light);line-height:2;">
+            3児の母としての子育て経験をもとに、日本ベビーサイン協会認定マスター講師として、これまで6,000組以上・1万人以上の親子にベビーサインを伝えてきました。ヨガでは全米ヨガアライアンスRYT500を修了し、産後のママからシニア世代まで、一人ひとりに合わせた少人数レッスンを行っています。
+          </p>
+          <a href="profile.html" class="btn-text" style="margin-top:10px;display:inline-block;">プロフィール詳細を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. 写真で雰囲気を見せる ===== -->
+  <section class="photo-section section-spacious">
+    <div class="container">
+      <h2 class="section-title">スタジオの雰囲気</h2>
+      <p class="section-lead">写真が届き次第、こちらに掲載します。</p>
+      <div class="photo-gallery" style="margin-top:32px;">
+        <div class="photo-gallery-item wide" style="min-height:200px;"><span>スタジオ外観<br>（準備中）</span></div>
+        <div class="photo-gallery-item"><span>内観<br>（準備中）</span></div>
+        <div class="photo-gallery-item"><span>レッスン風景<br>（準備中）</span></div>
+        <div class="photo-gallery-item"><span>ベビーサイン<br>（準備中）</span></div>
+        <div class="photo-gallery-item"><span>壁画<br>（準備中）</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. POINT 6つ（ヨガ3 + ベビーサイン3） ===== -->
+  <section class="points-section section-spacious">
+    <div class="container">
+      <h2 class="section-title">Studio Likoの特徴</h2>
+
+      <!-- ヨガ 3つ -->
+      <div class="points-block yoga-block" style="margin-top:48px;">
+        <div class="points-block-heading">
+          <span class="block-label">ヨガ</span>
+          <span class="block-tag">Yoga</span>
+        </div>
+        <div class="points-grid">
+          <div class="point-item">
+            <div class="point-num">01</div>
+            <h4>最大7名の少人数制</h4>
+            <p>「できているか不安」という方も、先生がしっかり見ます。初めての方も安心して参加できます。</p>
+          </div>
+          <div class="point-item">
+            <div class="point-num">02</div>
+            <h4>幅広い方に対応しています</h4>
+            <p>初心者・マタニティ・産後・シニアまで対応。それぞれの状態に合わせたクラスをご用意しています。</p>
+          </div>
+          <div class="point-item">
+            <div class="point-num">03</div>
+            <h4>（仮）スタジオの特徴</h4>
+            <p>（仮テキスト）床暖房・設備など、スタジオ環境についての説明が入ります。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ベビーサイン 3つ -->
+      <div class="points-block bs-block" style="margin-top:60px;">
+        <div class="points-block-heading">
+          <span class="block-label">ベビーサイン</span>
+          <span class="block-tag">Baby Sign</span>
+        </div>
+        <div class="points-grid">
+          <div class="point-item">
+            <div class="point-num">01</div>
+            <h4>ねんね期から参加できる月齢別クラス</h4>
+            <p>生後2〜3ヶ月のねんねの時期から参加できます。成長に合わせたクラス設計で、無理なく続けられます。</p>
+          </div>
+          <div class="point-item">
+            <div class="point-num">02</div>
+            <h4>日本ベビーサイン協会認定マスター講師</h4>
+            <p>日本ベビーサイン協会（日本唯一の公認団体）認定のマスター講師が担当します。正規団体の確かな指導を受けられます。</p>
+          </div>
+          <div class="point-item">
+            <div class="point-num">03</div>
+            <h4>6,000組以上の実績と経験</h4>
+            <p>赤ちゃんの気持ちが少し分かるようになると、育児がぐっと楽しくなります。「伝わった」という体験が、ママ自身の自信につながります。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 9. ヨガクラス紹介 ===== -->
+  <section class="yoga-intro-section section-spacious">
+    <div class="container">
+      <h2 class="section-title">ヨガクラス</h2>
+      <div class="class-intro-card">
+        <div class="class-intro-img">
           <picture>
             <source srcset="img/profile.webp" type="image/webp">
-            <img src="img/profile.png" alt="ヨガクラス" class="track-card-img" loading="lazy" width="600" height="450">
+            <img src="img/profile.png" alt="ヨガクラスの様子">
           </picture>
+        </div>
+        <div class="class-intro-text">
           <span class="track-en" style="color:var(--yoga);">Yoga</span>
-          <h3>ヨガ</h3>
+          <h3>いつも頑張っているママたちに、ほっとできる時間を。</h3>
           <p>
-            いつも頑張っているママたちに、ほっとできる時間を。
             床暖房完備の少人数スタジオで、自分のペースで整えられるヨガです。
             初心者・マタニティ・産後・シニアまで対応しています。
           </p>
           <ul class="track-class-list">
             <li>グループヨガ（最大7名）</li>
-            <li>パーソナルヨガ・オンラインヨガも</li>
+            <li>マタニティヨガ・産後ヨガ</li>
+            <li>シニアヨガ</li>
+            <li>パーソナルヨガ・オンラインヨガ</li>
           </ul>
           <a href="yoga.html" class="btn-text">ヨガクラスの詳細を見る →</a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="track-card-v2">
+  <!-- ===== 10. ベビーサイン紹介 ===== -->
+  <section class="bs-intro-section section-spacious">
+    <div class="container">
+      <h2 class="section-title">ベビーサイン</h2>
+      <div class="class-intro-card reverse">
+        <div class="class-intro-img">
           <picture>
             <source srcset="img/babysign_mama.webp" type="image/webp">
-            <img src="img/babysign_mama.png" alt="ベビーサインクラス" class="track-card-img" loading="lazy" width="600" height="450">
+            <img src="img/babysign_mama.png" alt="ベビーサインクラスの様子">
           </picture>
+        </div>
+        <div class="class-intro-text">
           <span class="track-en">Baby Sign</span>
-          <h3>ベビーサイン</h3>
+          <h3>まだ言葉が話せない赤ちゃんの気持ちを、手のサインで受け取る。</h3>
           <p>
-            まだ言葉が話せない赤ちゃんの気持ちを、手のサインで受け取る。
             「伝わった」という感動が、育児をぐっと楽しくします。
             月齢に合わせたクラスがあり、ねんねの時期から参加できます。
           </p>
           <ul class="track-class-list">
             <li>ねんねの赤ちゃん講座（〜おすわり期）</li>
             <li>ハイハイからの赤ちゃん講座（〜歩き始め期）</li>
+            <li>体験会（初めての方向け）</li>
           </ul>
           <a href="babysign.html" class="btn-text bs">ベビーサインの詳細を見る →</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== 中間CTA ===== -->
-  <section style="background:linear-gradient(135deg, var(--babysign-light) 0%, var(--yoga-light) 100%); padding:44px 0; text-align:center;">
+  <!-- ===== 11. 料金（アンカー） ===== -->
+  <section class="fee-section section-spacious" id="fee">
     <div class="container">
-      <p style="font-family:'Noto Serif JP',serif; font-size:1.05rem; margin-bottom:8px; color:var(--text);">「まずどんな教室か知りたい」という段階でも大丈夫です</p>
-      <p style="font-size:0.85rem; color:var(--text-light); margin-bottom:24px; line-height:2;">体験レッスン・体験会のご相談は、LINEからお気軽にどうぞ。</p>
-      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-        <a href="https://page.line.me/ttp2821f" class="btn-line">
-          <span>LINE</span>
-          <span>LINEでお気軽に相談する</span>
-        </a>
+      <h2 class="section-title">料金のご案内</h2>
+      <p class="section-lead">体験レッスン・体験会からお気軽にどうぞ。</p>
+      <div class="fee-cards">
+        <div class="fee-card">
+          <div class="fee-card-label">体験レッスン（ヨガ）</div>
+          <div class="fee-card-price">1,500円</div>
+        </div>
+        <div class="fee-card">
+          <div class="fee-card-label">体験会（ベビーサイン）</div>
+          <div class="fee-card-price">3,000円</div>
+        </div>
+        <div class="fee-card">
+          <div class="fee-card-label">チケット制（ヨガ・10回）</div>
+          <div class="fee-card-price">20,000円</div>
+        </div>
+        <div class="fee-card">
+          <div class="fee-card-label">入会金</div>
+          <div class="fee-card-price">6,000円</div>
+        </div>
       </div>
+      <p class="fee-note">※ 体験後1週間以内のご入会で入会金（6,000円）が免除されます。<br>継続コースの料金・その他クラスの詳細はこちら。</p>
+      <a href="guide.html" class="btn-text">料金・体験の詳細を見る →</a>
     </div>
   </section>
 
-  <!-- ===== Studio Likoが大切にしていること ===== -->
-  <section class="care-section section-spacious">
-    <div class="container">
-      <h2 class="section-title">Studio Likoが大切にしていること</h2>
-      <div class="care-grid">
-        <div class="care-item">
-          <h3>少人数だから、一人ひとりに向き合える</h3>
-          <p>ヨガは最大7名の少人数制。「できているか不安」という方も、先生がしっかり見ます。初めての方も安心して参加できます。</p>
-        </div>
-        <div class="care-item">
-          <h3>ベビーサインで、子育てに自信を</h3>
-          <p>赤ちゃんの気持ちが少し分かるようになると、育児がぐっと楽しくなります。「泣いている理由が分かった」「伝わった」という体験が、ママ自身の自信につながります。</p>
-        </div>
-        <div class="care-item">
-          <h3>子育ては、みんなで楽しむもの</h3>
-          <p>Studio Likoで出会ったママ同士がつながり、ベビーサインからヨガへ、ヨガからベビーサインへ、自然と輪が広がっています。ひとりじゃないと感じられる場所。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 先生について ===== -->
-  <section class="profile-intro section-spacious" style="background:#fff;">
-    <div class="container">
-      <h2 class="section-title">代表プロフィール</h2>
-      <div class="profile-card">
-        <div class="profile-img-round-v2" style="overflow:hidden; padding:0; background:var(--bg2); display:flex; align-items:center; justify-content:center;">
-          <span style="font-size:0.8rem; color:var(--text-light);">写真準備中</span>
-        </div>
-        <div>
-          <h2 style="font-family:'Noto Serif JP',serif; font-size:1.3rem; margin-bottom:4px;">岩本 理子</h2>
-          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:14px; letter-spacing:0.06em;">Studio Liko 代表</p>
-          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;">
-            <span style="background:var(--babysign-light); color:var(--babysign-dark); font-size:0.7rem; padding:4px 12px; border-radius:20px; font-weight:500;">福岡唯一のベビーサインマスター講師</span>
-            <span style="background:var(--yoga-light); color:var(--yoga-dark); font-size:0.7rem; padding:4px 12px; border-radius:20px; font-weight:500;">全米ヨガアライアンスRYT500修了</span>
-            <span style="background:var(--bg2); color:var(--text-light); font-size:0.7rem; padding:4px 12px; border-radius:20px; font-weight:500;">3児の母</span>
-          </div>
-          <p class="profile-catch">「ヨガで癒しを、ベビーサインで<br>子育ての自信を届けたい。」</p>
-          <p>
-            3児の母としての子育て経験をもとに、福岡唯一のベビーサインマスター講師として、これまで6000組以上・1万人以上の親子にベビーサインを伝えてきました。ヨガでは全米ヨガアライアンスRYT500を修了し、産後のママからシニア世代まで、一人ひとりに合わせた少人数レッスンを行っています。
-          </p>
-          <a href="profile.html" class="btn-text" style="margin-top:8px; display:inline-block;">プロフィール詳細を見る →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 通われた方の声 ===== -->
+  <!-- ===== 12. お客様の声 ===== -->
   <section class="voices-section section-spacious">
     <div class="container">
       <h2 class="section-title">通われた方の声</h2>
@@ -411,8 +510,8 @@
           <div class="faq-a">大丈夫です。ヨガは柔らかくなるための練習なので、今の体の状態は関係ありません。少人数なので、一人ひとりに合わせてご案内します。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">夫（パパ）も一緒に参加できますか？</div>
-          <div class="faq-a">パパのご参加もご相談可能です。ベビーサインはパパも一緒に覚えると、家でのやりとりがより楽しくなります。人数や料金が変わる場合がありますので、お申し込み時にお知らせください。</div>
+          <div class="faq-q">50代・60代でも通えますか？</div>
+          <div class="faq-a">はい、ぜひいらしてください。シニアヨガのクラスもご用意しており、50代・60代の方にも多く通っていただいています。</div>
         </div>
       </div>
       <div class="faq-more">
@@ -433,32 +532,39 @@
         </a>
         <a href="https://naturalroom.official.jp/%e3%81%94%e4%ba%88%e7%b4%84/" class="btn-yoyaku" target="_blank" rel="noopener">ご予約フォームから予約する</a>
       </div>
-      <p class="cta-address" style="margin-top:20px;">福岡市西区愛宕南2丁目12-12（姪浜エリア）</p>
+      <p style="margin-top:20px;font-size:.84rem;color:rgba(255,255,255,.7);">福岡市西区愛宕南2丁目12-12（姪浜エリア）</p>
     </div>
   </section>
 
   </main>
 
-  <!-- ===== フッター ===== -->
+  <!-- フッター -->
   <footer>
     <div class="container">
       <p>Studio Liko &nbsp;|&nbsp; 福岡市西区愛宕南2丁目12-12</p>
       <p style="margin-top:10px;">
-        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
         <a href="yoga.html">ヨガ</a> &nbsp;|&nbsp;
+        <a href="babysign.html">ベビーサイン</a> &nbsp;|&nbsp;
+        <a href="training.html">講師育成</a> &nbsp;|&nbsp;
         <a href="voice.html">受講者の声</a> &nbsp;|&nbsp;
         <a href="profile.html">プロフィール</a> &nbsp;|&nbsp;
         <a href="faq.html">よくある質問</a> &nbsp;|&nbsp;
-        <a href="sns.html">公式SNS</a> &nbsp;|&nbsp; <a href="training.html">講師育成</a>
+        <a href="guide.html">初めての方へ</a>
       </p>
       <p style="margin-top:14px;">© 2024 Studio Liko All Rights Reserved.</p>
     </div>
   </footer>
 
   <div class="nav-overlay" id="navOverlay"></div>
-  <div class="sticky-cta">
-    <a href="https://page.line.me/ttp2821f">LINEでお気軽に相談する</a>
+
+  <!-- スマホ下部固定ボタン -->
+  <div class="sticky-cta" id="stickyCta">
+    <div class="sticky-cta-inner">
+      <a href="https://naturalroom.official.jp/%e3%81%94%e4%ba%88%e7%b4%84/" class="sticky-btn sticky-btn-yoyaku" target="_blank" rel="noopener">体験を予約する</a>
+      <a href="https://page.line.me/ttp2821f" class="sticky-btn sticky-btn-line">LINEで相談</a>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -664,7 +664,7 @@ footer a { color: rgba(255,255,255,0.7); }
 .care-section { background: var(--bg2); }
 .care-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 48px;
 }
@@ -994,6 +994,7 @@ footer a { color: rgba(255,255,255,0.7); }
   .profile-page-grid,
   .voices-grid,
   .care-grid { grid-template-columns: 1fr; }
+  .care-grid .care-item[style*="grid-column"] { grid-column: 1; }
   .profile-card { flex-direction: column; text-align: center; }
   .profile-img-round { width: 160px; height: 160px; }
   .target-grid { grid-template-columns: 1fr 1fr; }
@@ -1094,4 +1095,388 @@ footer a { color: rgba(255,255,255,0.7); }
 }
 @media (max-width: 480px) {
   .section-title { font-size: 1.3rem; }
+}
+
+/* =============================================
+   新構成コンポーネント（2026-05-20 再設計）
+   ============================================= */
+
+/* ── 入口カード（セクション2） ── */
+.entry-section { background: var(--bg); }
+.entry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+.entry-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 4 / 3;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.entry-card:hover { transform: translateY(-3px); }
+.entry-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.entry-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.0) 55%);
+}
+.entry-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 24px 22px;
+  color: #fff;
+}
+.entry-card-label .label-en {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 6px;
+}
+.entry-card-label .label-ja {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+.entry-card-label .label-arrow {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  letter-spacing: 0.06em;
+}
+.entry-card.yoga-entry .entry-card-overlay { background: linear-gradient(to top, rgba(40,70,45,.6) 0%, rgba(0,0,0,.0) 55%); }
+.entry-card.bs-entry .entry-card-overlay { background: linear-gradient(to top, rgba(100,40,55,.55) 0%, rgba(0,0,0,.0) 55%); }
+
+/* ── スケジュール導線（セクション3） ── */
+.schedule-section { background: var(--bg2); }
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.schedule-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.schedule-card-header {
+  padding: 14px 20px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.schedule-card.yoga-sch .schedule-card-header {
+  background: var(--yoga-light);
+  color: var(--yoga-dark);
+  border-bottom: 2px solid var(--yoga);
+}
+.schedule-card.bs-sch .schedule-card-header {
+  background: var(--babysign-light);
+  color: var(--babysign-dark);
+  border-bottom: 2px solid var(--babysign);
+}
+.schedule-img-area {
+  padding: 24px 20px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--bg2);
+  color: var(--text-light);
+  font-size: 0.82rem;
+  text-align: center;
+}
+.schedule-img-area img { width: 100%; height: auto; border-radius: 4px; }
+.schedule-card-footer {
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── はじめての方へバナー（セクション4） ── */
+.firsttime-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+.firsttime-card {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  min-height: 190px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.firsttime-card:hover { transform: translateY(-3px); }
+.firsttime-card-bg {
+  position: absolute;
+  inset: 0;
+}
+.firsttime-card-bg.yoga-bg {
+  background: linear-gradient(135deg, var(--yoga-light) 0%, #d8eada 100%);
+}
+.firsttime-card-bg.bs-bg {
+  background: linear-gradient(135deg, var(--babysign-light) 0%, #fde0e8 100%);
+}
+.firsttime-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 32px 28px;
+}
+.firsttime-card-content h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.firsttime-card-content p {
+  font-size: 0.84rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+.firsttime-arrow {
+  font-size: 0.82rem;
+  color: var(--yoga-dark);
+  font-weight: 500;
+}
+.firsttime-card.bs-card .firsttime-arrow { color: var(--babysign-dark); }
+
+/* ── Studio Likoについて（セクション5） ── */
+.studio-about {
+  background: #fff;
+  text-align: center;
+}
+.studio-about-lead {
+  max-width: 600px;
+  margin: 24px auto 0;
+  font-size: 0.95rem;
+  line-height: 2.4;
+  color: var(--text-light);
+}
+.studio-about-logo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+/* ── 写真ギャラリー（セクション7） ── */
+.photo-section { background: var(--bg2); }
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 32px;
+}
+.photo-gallery-item {
+  aspect-ratio: 1;
+  background: var(--bg);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 0.75rem;
+}
+.photo-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-gallery-item.wide { grid-column: span 2; }
+
+/* ── POINT 6つ（セクション8） ── */
+.points-section { background: var(--bg); }
+.points-block { margin-bottom: 60px; }
+.points-block:last-child { margin-bottom: 0; }
+.points-block-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--border);
+}
+.points-block-heading .block-label {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.points-block-heading .block-tag {
+  font-size: 0.72rem;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+}
+.points-block.yoga-block .block-tag { background: var(--yoga-light); color: var(--yoga-dark); }
+.points-block.bs-block .block-tag { background: var(--babysign-light); color: var(--babysign-dark); }
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.point-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  border-top-width: 2px;
+}
+.yoga-block .point-item { border-top-color: var(--yoga); }
+.bs-block .point-item { border-top-color: var(--babysign); }
+.point-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+.yoga-block .point-num { color: var(--yoga); }
+.bs-block .point-num { color: var(--babysign); }
+.point-item h4 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.point-item p {
+  font-size: 0.84rem;
+  color: var(--text-light);
+  line-height: 1.95;
+}
+
+/* ── クラス紹介（セクション9・10） ── */
+.yoga-intro-section { background: #fff; }
+.bs-intro-section { background: var(--babysign-light); }
+.class-intro-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 40px;
+}
+.class-intro-card.reverse { direction: rtl; }
+.class-intro-card.reverse > * { direction: ltr; }
+.class-intro-img {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.class-intro-img img { width: 100%; height: 100%; object-fit: cover; }
+.class-intro-text h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+.class-intro-text p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+/* ── 料金プレビュー（セクション11） ── */
+.fee-section {
+  background: var(--bg2);
+  text-align: center;
+}
+.fee-cards {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 32px 0 24px;
+}
+.fee-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 24px;
+  min-width: 160px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.fee-card-label {
+  font-size: 0.76rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+.fee-card-price {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.fee-note {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+
+/* ── sticky CTAボタン（2つ版） ── */
+.sticky-cta-inner {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px 14px;
+  background: rgba(248,246,242,0.97);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid var(--border);
+}
+.sticky-btn {
+  flex: 1;
+  display: block;
+  text-align: center;
+  padding: 11px 8px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.sticky-btn:active { opacity: 0.8; }
+.sticky-btn-yoyaku {
+  background: var(--yoga);
+  color: #fff;
+}
+.sticky-btn-line {
+  background: #fff;
+  color: #06c755;
+  border: 2px solid #06c755;
+}
+
+/* ── レスポンシブ追加 ── */
+@media (max-width: 900px) {
+  .entry-grid,
+  .schedule-grid,
+  .firsttime-grid,
+  .class-intro-card { grid-template-columns: 1fr; }
+  .class-intro-card.reverse { direction: ltr; }
+  .points-grid { grid-template-columns: 1fr 1fr; }
+  .photo-gallery { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .points-grid { grid-template-columns: 1fr; }
+  .photo-gallery { grid-template-columns: repeat(2, 1fr); }
+  .fee-cards { flex-direction: column; align-items: center; }
+  .fee-card { min-width: 200px; }
 }
