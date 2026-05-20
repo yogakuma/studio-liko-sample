@@ -1210,31 +1210,25 @@ footer a { color: rgba(255,255,255,0.7); }
     align-items: center;
     justify-content: center;
     flex: 1;
-    padding: 20px 12px;
-    font-size: 0.85rem;
+    padding: 24px 14px;
+    font-size: 0.95rem;
     font-weight: 600;
     font-family: 'Noto Serif JP', serif;
     text-align: center;
-    line-height: 1.6;
-  }
-  .entry-card.yoga-entry .entry-card-label .label-sp-title {
-    background: #deeadf;
-    color: var(--yoga-dark);
-  }
-  .entry-card.bs-entry .entry-card-label .label-sp-title {
-    background: #f8e4ea;
-    color: var(--babysign-dark);
+    line-height: 1.5;
+    background: #fff;
+    color: var(--text);
   }
   .entry-card-label .label-en { display: none; }
   .entry-card-label .label-ja {
     display: block;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 500;
     font-family: 'Noto Sans JP', sans-serif;
-    padding: 12px 10px;
+    padding: 13px 10px;
     text-align: center;
     margin-bottom: 0;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     flex-shrink: 0;
   }
   .entry-card.yoga-entry .entry-card-label .label-ja {
@@ -1246,9 +1240,9 @@ footer a { color: rgba(255,255,255,0.7); }
     color: var(--babysign-dark);
   }
   /* タップ時に少し濃く */
-  .entry-card.yoga-entry:active .entry-card-label .label-sp-title { background: #c5d8c7; }
+  .entry-card.yoga-entry:active .entry-card-label .label-sp-title { background: #f0f5f0; }
   .entry-card.yoga-entry:active .entry-card-label .label-ja { background: #afc8b1; }
-  .entry-card.bs-entry:active .entry-card-label .label-sp-title { background: #f0d0da; }
+  .entry-card.bs-entry:active .entry-card-label .label-sp-title { background: #fdf0f3; }
   .entry-card.bs-entry:active .entry-card-label .label-ja { background: #e8b0c0; }
   .entry-card-label .label-arrow { display: none; }
 }
