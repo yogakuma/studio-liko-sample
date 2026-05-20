@@ -1167,6 +1167,9 @@ footer a { color: rgba(255,255,255,0.7); }
 
 /* ── モバイル入口カード：Mauleaスタイル（FV下端に乗り上げ） ── */
 @media (max-width: 768px) {
+  /* FVボタン非表示 */
+  .fv-hero .fv-btns { display: none !important; }
+
   .entry-section {
     position: relative;
     z-index: 10;
@@ -1176,12 +1179,20 @@ footer a { color: rgba(255,255,255,0.7); }
   }
   .entry-section .section-title,
   .entry-section .section-lead { display: none; }
-  .entry-grid { gap: 10px; margin-top: 0; grid-template-columns: 1fr 1fr !important; }
+  .entry-grid {
+    gap: 10px;
+    margin-top: 0;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: stretch;
+  }
   .entry-card {
     aspect-ratio: auto;
     height: auto;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
   }
   .entry-card picture,
   .entry-card img,
@@ -1190,19 +1201,23 @@ footer a { color: rgba(255,255,255,0.7); }
     position: static;
     display: flex;
     flex-direction: column;
+    flex: 1;
     padding: 0;
     color: var(--text);
   }
   .entry-card-label .label-sp-title {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
     background: #fff;
-    padding: 20px 12px 16px;
-    font-size: 0.88rem;
+    padding: 18px 10px;
+    font-size: 0.85rem;
     font-weight: 600;
     font-family: 'Noto Serif JP', serif;
     color: var(--text);
     text-align: center;
-    line-height: 1.65;
+    line-height: 1.6;
   }
   .entry-card-label .label-en { display: none; }
   .entry-card-label .label-ja {
@@ -1210,17 +1225,18 @@ footer a { color: rgba(255,255,255,0.7); }
     font-size: 0.78rem;
     font-weight: 500;
     font-family: 'Noto Sans JP', sans-serif;
-    padding: 11px 12px;
+    padding: 13px 10px;
     text-align: center;
     margin-bottom: 0;
     letter-spacing: 0.1em;
+    flex-shrink: 0;
   }
   .entry-card.yoga-entry .entry-card-label .label-ja {
-    background: var(--yoga);
+    background: var(--yoga-dark);
     color: #fff;
   }
   .entry-card.bs-entry .entry-card-label .label-ja {
-    background: var(--babysign);
+    background: var(--babysign-dark);
     color: #fff;
   }
   .entry-card-label .label-arrow { display: none; }
