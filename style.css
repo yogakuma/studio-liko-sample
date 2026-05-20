@@ -1232,21 +1232,21 @@ footer a { color: rgba(255,255,255,0.7); }
     letter-spacing: 0.14em;
     flex-shrink: 0;
   }
-  /* ヨガ：くすみセージグリーン */
+  /* ヨガ：バッジと同じグリーン */
   .entry-card.yoga-entry .entry-card-label .label-ja {
-    background: #8fa882;
+    background: #6b8f71;
     color: #fff;
   }
-  /* ベビーサイン：ミモザ・クリームイエロー */
+  /* ベビーサイン：ミモザ・クリームイエロー（黄緑に濁らせない） */
   .entry-card.bs-entry .entry-card-label .label-ja {
-    background: #cfc87a;
-    color: #fff;
+    background: #f0d870;
+    color: #3d5a20;
   }
   /* タップ時に少し濃く */
   .entry-card.yoga-entry:active .entry-card-label .label-sp-title { background: #f3f6f3; }
-  .entry-card.yoga-entry:active .entry-card-label .label-ja { background: #7a9470; }
-  .entry-card.bs-entry:active .entry-card-label .label-sp-title { background: #f8f5e8; }
-  .entry-card.bs-entry:active .entry-card-label .label-ja { background: #b8b060; }
+  .entry-card.yoga-entry:active .entry-card-label .label-ja { background: #4a6b50; }
+  .entry-card.bs-entry:active .entry-card-label .label-sp-title { background: #fdf8e8; }
+  .entry-card.bs-entry:active .entry-card-label .label-ja { background: #dcc050; }
   .entry-card-label .label-arrow { display: none; }
 }
 
