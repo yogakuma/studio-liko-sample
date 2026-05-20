@@ -1188,11 +1188,11 @@ footer a { color: rgba(255,255,255,0.7); }
   .entry-card {
     aspect-ratio: auto;
     height: auto;
-    border-radius: 10px;
+    border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
   }
   .entry-card picture,
   .entry-card img,
@@ -1210,40 +1210,43 @@ footer a { color: rgba(255,255,255,0.7); }
     align-items: center;
     justify-content: center;
     flex: 1;
-    padding: 24px 14px;
-    font-size: 0.95rem;
+    padding: 26px 12px;
+    font-size: 0.88rem;
     font-weight: 600;
     font-family: 'Noto Serif JP', serif;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.55;
     background: #fff;
     color: var(--text);
+    letter-spacing: 0.03em;
   }
   .entry-card-label .label-en { display: none; }
   .entry-card-label .label-ja {
     display: block;
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.74rem;
+    font-weight: 400;
     font-family: 'Noto Sans JP', sans-serif;
-    padding: 13px 10px;
+    padding: 12px 10px;
     text-align: center;
     margin-bottom: 0;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     flex-shrink: 0;
   }
+  /* ヨガ：くすみセージグリーン */
   .entry-card.yoga-entry .entry-card-label .label-ja {
-    background: #c8ddc9;
-    color: var(--yoga-dark);
+    background: #8fa882;
+    color: #fff;
   }
+  /* ベビーサイン：ミモザ・クリームイエロー */
   .entry-card.bs-entry .entry-card-label .label-ja {
-    background: #f0e8b0;
-    color: #7a6a20;
+    background: #cfc87a;
+    color: #fff;
   }
   /* タップ時に少し濃く */
-  .entry-card.yoga-entry:active .entry-card-label .label-sp-title { background: #f0f5f0; }
-  .entry-card.yoga-entry:active .entry-card-label .label-ja { background: #afc8b1; }
-  .entry-card.bs-entry:active .entry-card-label .label-sp-title { background: #fdf0f3; }
-  .entry-card.bs-entry:active .entry-card-label .label-ja { background: #e0d890; }
+  .entry-card.yoga-entry:active .entry-card-label .label-sp-title { background: #f3f6f3; }
+  .entry-card.yoga-entry:active .entry-card-label .label-ja { background: #7a9470; }
+  .entry-card.bs-entry:active .entry-card-label .label-sp-title { background: #f8f5e8; }
+  .entry-card.bs-entry:active .entry-card-label .label-ja { background: #b8b060; }
   .entry-card-label .label-arrow { display: none; }
 }
 
